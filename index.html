@@ -3,370 +3,331 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>World Cup R32 — Sharp's Deep Edge Report · June 30, 2026</title>
+<title>World Cup MD3 — Sharp's Betting Guide · June 26, 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#070b16;--bg2:#0b1120;--panel:#0f1729;--panel2:#131d33;--line:#1e2b47;--ink:#eaf0fb;--ink-dim:#9fb0cd;--ink-faint:#6b7c9c;--pitch:#19d66b;--amber:#ffb020;--gold:#f5c542;--ice:#41c5f0;--rose:#ff5c7a;--violet:#9b8cff;--r:16px;--shadow:0 18px 48px -18px rgba(0,0,0,.7);}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(1200px 600px at 78% -8%, rgba(25,214,107,.10), transparent 60%),radial-gradient(1000px 560px at 8% 4%, rgba(65,197,240,.09), transparent 55%),var(--bg);color:var(--ink);font-family:'Sora',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:64px;}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;line-height:1.12;margin:0;letter-spacing:-.01em}
+:root{
+  --bg:#070b16; --bg2:#0b1120; --panel:#0f1729; --panel2:#131d33; --line:#1e2b47;
+  --ink:#eaf0fb; --ink-dim:#9fb0cd; --ink-faint:#6b7c9c;
+  --pitch:#19d66b; --pitch-deep:#0a9c4a; --amber:#ffb020; --gold:#f5c542;
+  --ice:#41c5f0; --rose:#ff5c7a; --violet:#9b8cff;
+  --over:#19d66b; --under:#41c5f0; --flip:#ffb020;
+  --r:16px; --shadow:0 18px 48px -18px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:
+    radial-gradient(1200px 600px at 78% -8%, rgba(25,214,107,.10), transparent 60%),
+    radial-gradient(1000px 560px at 8% 4%, rgba(65,197,240,.09), transparent 55%),
+    var(--bg);
+  color:var(--ink); font-family:'Sora',system-ui,sans-serif; line-height:1.6;
+  -webkit-font-smoothing:antialiased; padding-bottom:64px;
+}
+.wrap{max-width:1080px; margin:0 auto; padding:0 22px}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif; line-height:1.12; margin:0; letter-spacing:-.01em}
 .mono{font-family:'JetBrains Mono',monospace}
-a{color:var(--ice);text-decoration:none}
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#091022 0%,#070b16 100%);}
-.hero::before{content:"";position:absolute;inset:0;opacity:.5;background-image:repeating-linear-gradient(90deg,transparent 0 78px,rgba(255,255,255,.025) 78px 79px);pointer-events:none;}
-.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,var(--pitch),var(--ice),var(--amber));}
-.hero-inner{position:relative;padding:54px 0 40px}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--pitch);background:rgba(25,214,107,.08);border:1px solid rgba(25,214,107,.25);padding:6px 13px;border-radius:999px}
+a{color:var(--ice); text-decoration:none}
+
+/* HERO */
+.hero{position:relative; overflow:hidden; border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,#091022 0%, #070b16 100%);}
+.hero::before{content:""; position:absolute; inset:0; opacity:.5;
+  background-image:repeating-linear-gradient(90deg, transparent 0 78px, rgba(255,255,255,.025) 78px 79px);
+  pointer-events:none;}
+.hero::after{content:""; position:absolute; left:0; right:0; bottom:-1px; height:2px;
+  background:linear-gradient(90deg,var(--pitch),var(--ice),var(--amber));}
+.hero-inner{position:relative; padding:54px 0 40px}
+.eyebrow{display:inline-flex; align-items:center; gap:9px; font-family:'JetBrains Mono',monospace;
+  font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--pitch);
+  background:rgba(25,214,107,.08); border:1px solid rgba(25,214,107,.25); padding:6px 13px; border-radius:999px}
 .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--pitch);box-shadow:0 0 0 4px rgba(25,214,107,.18)}
-.hero h1{font-size:clamp(34px,6vw,58px);font-weight:700;margin:18px 0 8px}
-.hero h1 .accent{background:linear-gradient(90deg,var(--pitch),var(--ice));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .sub{font-size:clamp(15px,2.2vw,18px);color:var(--ink-dim);max-width:730px}
-.hero .stamp{margin-top:20px;display:flex;flex-wrap:wrap;gap:10px}
-.chip{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-dim);background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:7px 13px}
+.hero h1{font-size:clamp(34px,6vw,60px); font-weight:700; margin:18px 0 8px}
+.hero h1 .accent{background:linear-gradient(90deg,var(--pitch),var(--ice)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.hero .sub{font-size:clamp(15px,2.2vw,19px); color:var(--ink-dim); max-width:680px}
+.hero .stamp{margin-top:20px; display:flex; flex-wrap:wrap; gap:10px}
+.chip{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-dim);
+  background:var(--panel); border:1px solid var(--line); border-radius:999px; padding:7px 13px}
 .chip b{color:var(--ink)}
-section{padding:38px 0 8px}
-.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:20px}
-.sec-head .num{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--pitch);padding-top:4px}
-.sec-head h2{font-size:clamp(21px,3.4vw,29px);font-weight:600}
-.sec-head .rule{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent);align-self:center}
-.panel{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:var(--r);padding:24px 26px;box-shadow:var(--shadow)}
-.panel p{margin:0 0 12px}.panel p:last-child{margin-bottom:0}
-.lead{font-size:17px;color:var(--ink)}
-.banner{display:flex;gap:12px;align-items:flex-start;margin-top:26px;background:linear-gradient(180deg,rgba(245,197,66,.1),rgba(245,197,66,.03));border:1px solid rgba(245,197,66,.32);border-radius:14px;padding:15px 18px;font-size:14.5px;color:var(--ink-dim)}
-.banner .pulse{flex-shrink:0;width:10px;height:10px;border-radius:50%;background:var(--gold);margin-top:6px;box-shadow:0 0 0 0 rgba(245,197,66,.6);animation:pulse 1.8s infinite}
-.banner b{color:var(--ink)}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(245,197,66,.5)}70%{box-shadow:0 0 0 9px rgba(245,197,66,0)}100%{box-shadow:0 0 0 0 rgba(245,197,66,0)}}
-/* report card */
-.rc{display:grid;gap:12px}
-.rcgame{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:16px 18px;border-left:4px solid var(--line)}
-.rcgame.win{border-left-color:var(--pitch)}.rcgame.mix{border-left-color:var(--amber)}.rcgame.loss{border-left-color:var(--rose)}
-.rcgame h4{font-size:16px;margin-bottom:3px}
-.rcgame .res{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-faint);margin-bottom:9px}
-.rcrow{display:flex;gap:8px;align-items:baseline;padding:4px 0;font-size:13.5px;color:var(--ink-dim)}
-.tag{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;padding:1px 7px;border-radius:5px;flex-shrink:0}
-.tag.w{background:rgba(25,214,107,.16);color:var(--pitch)}.tag.l{background:rgba(255,92,122,.16);color:var(--rose)}.tag.k{background:rgba(255,176,32,.16);color:var(--amber)}
-.mtab{width:100%;border-collapse:collapse;margin-top:18px;font-size:14px}
-.mtab th,.mtab td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line)}
-.mtab th{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
-.mtab td.g{font-weight:600;color:var(--ink)}.mtab .mono{font-size:13px;color:var(--ink-dim)}
-.mtab .edge{font-family:'JetBrains Mono',monospace;font-weight:700}.mtab .edge.big{color:var(--pitch)}.mtab .edge.med{color:var(--amber)}
-.cod{display:grid;grid-template-columns:1.1fr 1fr;gap:16px;margin-top:4px}
-.cod-main{background:radial-gradient(420px 200px at 90% 0%,rgba(245,197,66,.12),transparent 60%),var(--panel);border:1px solid rgba(245,197,66,.3);border-radius:var(--r);padding:24px 26px;box-shadow:var(--shadow)}
-.cod-main .tag2{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
-.cod-main h3{font-size:20px;margin:8px 0 10px}
-.cod-side{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px}
-.cod-side .tag2{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--violet)}
-.cod-side h3{font-size:17px;margin:8px 0 10px}
-.board{display:grid;gap:12px}
-.bet{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:15px 18px;transition:border-color .2s,transform .2s}
-.bet:hover{border-color:rgba(25,214,107,.4);transform:translateX(3px)}
-.bet .rank{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;color:var(--ink-faint);width:26px;text-align:center}
-.bet .body .game{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.05em;color:var(--ink-faint);text-transform:uppercase}
-.bet .body .name{font-weight:600;font-size:15.5px;color:var(--ink);margin:1px 0 3px}
-.bet .body .why{font-size:13px;color:var(--ink-dim)}
-.bet .meta{text-align:right;min-width:118px}
-.bet .price{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:16px;color:var(--pitch)}
-.bet .probs{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-faint);margin-top:2px}
-.tt{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ice);border:1px solid rgba(65,197,240,.3);border-radius:5px;padding:1px 5px;margin-left:6px;vertical-align:middle}
-.badge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-top:6px}
-.badge.solid{background:rgba(65,197,240,.14);color:var(--ice);border:1px solid rgba(65,197,240,.32)}
-.badge.lean{background:rgba(255,176,32,.14);color:var(--amber);border:1px solid rgba(255,176,32,.3)}
-.badge.longshot{background:rgba(155,140,255,.14);color:var(--violet);border:1px solid rgba(155,140,255,.32)}
-.sgp{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
-.sgp.xt{border-color:rgba(155,140,255,.34);background:radial-gradient(360px 160px at 100% 0%,rgba(155,140,255,.09),transparent 60%),var(--panel)}
-.sgp h4{font-size:15.5px;margin-bottom:4px}
-.sgp .kind{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--violet)}
-.sgp .legs{list-style:none;padding:0;margin:10px 0}
-.sgp .legs li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px dashed var(--line);font-size:14px}
+
+/* SECTIONS */
+section{padding:40px 0 8px}
+.sec-head{display:flex; align-items:baseline; gap:14px; margin-bottom:20px}
+.sec-head .num{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--pitch); padding-top:4px}
+.sec-head h2{font-size:clamp(22px,3.4vw,30px); font-weight:600}
+.sec-head .rule{flex:1; height:1px; background:linear-gradient(90deg,var(--line),transparent); align-self:center}
+
+/* NARRATIVE / PROSE PANELS */
+.panel{background:linear-gradient(180deg,var(--panel),var(--bg2)); border:1px solid var(--line);
+  border-radius:var(--r); padding:24px 26px; box-shadow:var(--shadow)}
+.panel p{margin:0 0 12px} .panel p:last-child{margin-bottom:0}
+.lead{font-size:17px; color:var(--ink)}
+.themes{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:18px}
+.theme{background:var(--panel2); border:1px solid var(--line); border-left:3px solid var(--pitch);
+  border-radius:12px; padding:15px 17px; font-size:14.5px; color:var(--ink-dim)}
+.theme.under{border-left-color:var(--under)} .theme.flip{border-left-color:var(--flip)}
+
+/* CARD OF DAY */
+.cod{display:grid; grid-template-columns:1.1fr 1fr; gap:16px; margin-top:4px}
+.cod-main{background:
+    radial-gradient(420px 200px at 90% 0%, rgba(245,197,66,.12), transparent 60%), var(--panel);
+  border:1px solid rgba(245,197,66,.3); border-radius:var(--r); padding:24px 26px; box-shadow:var(--shadow)}
+.cod-main .tag{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold)}
+.cod-main h3{font-size:21px; margin:8px 0 10px}
+.cod-side{background:var(--panel); border:1px solid var(--line); border-radius:var(--r); padding:22px 24px}
+.cod-side .tag{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--violet)}
+.cod-side h3{font-size:18px; margin:8px 0 10px}
+
+/* HIGHLIGHT BOARDS (best singles/longshots/sgps) */
+.board{display:grid; gap:12px}
+.bet{display:grid; grid-template-columns:auto 1fr auto; gap:16px; align-items:center;
+  background:var(--panel); border:1px solid var(--line); border-radius:13px; padding:15px 18px;
+  transition:border-color .2s, transform .2s}
+.bet:hover{border-color:rgba(25,214,107,.4); transform:translateX(3px)}
+.bet .rank{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; color:var(--ink-faint); width:26px; text-align:center}
+.bet .body .game{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.05em; color:var(--ink-faint); text-transform:uppercase}
+.bet .body .name{font-weight:600; font-size:16px; color:var(--ink); margin:1px 0 3px}
+.bet .body .why{font-size:13.5px; color:var(--ink-dim)}
+.bet .meta{text-align:right; min-width:120px}
+.bet .price{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:17px; color:var(--pitch)}
+.bet .probs{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-faint); margin-top:2px}
+.badge{display:inline-block; font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:700;
+  letter-spacing:.08em; text-transform:uppercase; padding:3px 9px; border-radius:999px; margin-top:6px}
+.badge.strong{background:rgba(25,214,107,.16); color:var(--pitch); border:1px solid rgba(25,214,107,.35)}
+.badge.solid{background:rgba(65,197,240,.14); color:var(--ice); border:1px solid rgba(65,197,240,.32)}
+.badge.lean{background:rgba(255,176,32,.14); color:var(--amber); border:1px solid rgba(255,176,32,.3)}
+.badge.longshot{background:rgba(155,140,255,.14); color:var(--violet); border:1px solid rgba(155,140,255,.32)}
+
+/* SGP cards */
+.sgp{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px 20px}
+.sgp h4{font-size:16px; margin-bottom:4px}
+.sgp .legs{list-style:none; padding:0; margin:12px 0}
+.sgp .legs li{display:flex; gap:10px; align-items:flex-start; padding:7px 0; border-bottom:1px dashed var(--line); font-size:14.5px}
 .sgp .legs li:last-child{border-bottom:none}
-.sgp .legs li::before{content:"\25B8";color:var(--pitch);font-size:13px;margin-top:2px}
-.sgp .corr{font-size:12.5px;color:var(--ink-dim);background:var(--panel2);border-radius:9px;padding:10px 13px;margin-top:6px}
+.sgp .legs li::before{content:"▸"; color:var(--pitch); font-size:13px; margin-top:2px}
+.sgp .corr{font-size:13px; color:var(--ink-dim); background:var(--panel2); border-radius:9px; padding:10px 13px; margin-top:6px}
 .sgp .corr b{color:var(--ice)}
-.taxtab{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:4px}
-.taxtab th,.taxtab td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-.taxtab th{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
-.taxtab td.m{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--gold);white-space:nowrap}
-.taxtab .reg{color:var(--ice)}.taxtab .adv{color:var(--pitch)}
-.games{display:grid;gap:22px}
-.game{background:linear-gradient(180deg,var(--panel),var(--bg2));border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);opacity:0;transform:translateY(16px);animation:rise .6s forwards}
-@keyframes rise{to{opacity:1;transform:none}}
-.game-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:20px 24px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.02),transparent)}
-.game-top .matchup{font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700}
-.game-top .vinfo{font-size:12px;color:var(--ink-faint);margin-top:4px;font-family:'JetBrains Mono',monospace}
-.atype{font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;white-space:nowrap}
-.atype.over{background:rgba(25,214,107,.14);color:var(--pitch);border:1px solid rgba(25,214,107,.34)}
-.atype.under{background:rgba(65,197,240,.13);color:var(--ice);border:1px solid rgba(65,197,240,.32)}
-.atype.flip{background:rgba(255,176,32,.13);color:var(--amber);border:1px solid rgba(255,176,32,.3)}
+
+/* GAME CARDS */
+.games{display:grid; gap:22px}
+.game{background:linear-gradient(180deg,var(--panel),var(--bg2)); border:1px solid var(--line);
+  border-radius:18px; overflow:hidden; box-shadow:var(--shadow);
+  opacity:0; transform:translateY(16px); animation:rise .6s forwards}
+@keyframes rise{to{opacity:1; transform:none}}
+.game-top{display:flex; justify-content:space-between; align-items:flex-start; gap:14px;
+  padding:20px 24px; border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg, rgba(255,255,255,.02), transparent)}
+.game-top .matchup{font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:700}
+.game-top .vinfo{font-size:12.5px; color:var(--ink-faint); margin-top:4px; font-family:'JetBrains Mono',monospace}
+.atype{font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+  padding:6px 12px; border-radius:999px; white-space:nowrap}
+.atype.over{background:rgba(25,214,107,.14); color:var(--pitch); border:1px solid rgba(25,214,107,.34)}
+.atype.under{background:rgba(65,197,240,.13); color:var(--under); border:1px solid rgba(65,197,240,.32)}
+.atype.flip{background:rgba(255,176,32,.13); color:var(--flip); border:1px solid rgba(255,176,32,.3)}
+.atype.live{background:rgba(255,92,122,.16); color:var(--rose); border:1px solid rgba(255,92,122,.42)}
+.game.islive{border-color:rgba(255,92,122,.28)}
+.game.islive .game-top{background:linear-gradient(180deg, rgba(255,92,122,.06), transparent)}
+.live-banner{display:flex; gap:12px; align-items:flex-start; margin-top:28px;
+  background:linear-gradient(180deg, rgba(255,92,122,.1), rgba(255,92,122,.03));
+  border:1px solid rgba(255,92,122,.32); border-radius:14px; padding:15px 18px; font-size:14.5px; color:var(--ink-dim)}
+.live-banner .pulse{flex-shrink:0; width:10px; height:10px; border-radius:50%; background:var(--rose); margin-top:6px;
+  box-shadow:0 0 0 0 rgba(255,92,122,.6); animation:pulse 1.8s infinite}
+.live-banner b{color:var(--ink)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,92,122,.5)}70%{box-shadow:0 0 0 9px rgba(255,92,122,0)}100%{box-shadow:0 0 0 0 rgba(255,92,122,0)}}
 .game-body{padding:8px 24px 22px}
-.row{padding:15px 0;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:none}
-.row .k{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--pitch);margin-bottom:7px}
-.row.read .k{color:var(--ice)}.row.inc .k{color:var(--gold)}.row.lineup .k{color:var(--violet)}
-.row .v{font-size:14px;color:var(--ink-dim)}.row .v b{color:var(--ink)}
-.mini-board{display:grid;gap:9px;margin-top:4px}
-.mini{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:11px 14px}
-.mini .n{font-weight:600;font-size:14px;color:var(--ink)}
-.mini .n .sub{display:block;font-weight:400;font-size:12.5px;color:var(--ink-dim);margin-top:2px}
-.mini .r{text-align:right;white-space:nowrap}
-.mini .r .p{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14.5px;color:var(--pitch)}
-.mini .r .pr{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--ink-faint);margin-top:2px}
-.model-line{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-dim);background:var(--bg2);border:1px solid var(--line);border-radius:9px;padding:11px 14px;overflow-x:auto;white-space:nowrap}
-footer{margin-top:46px;border-top:1px solid var(--line);padding-top:24px}
-.disclaimer{font-size:13px;color:var(--ink-faint);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.row{padding:16px 0; border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:none}
+.row .k{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--pitch); margin-bottom:7px}
+.row.read .k{color:var(--ice)} .row.gd .k{color:var(--gold)} .row.lineup .k{color:var(--violet)}
+.row .v{font-size:14.5px; color:var(--ink-dim)}
+.row .v b{color:var(--ink)}
+.mini-board{display:grid; gap:9px; margin-top:4px}
+.mini{display:grid; grid-template-columns:1fr auto; gap:12px; align-items:center;
+  background:var(--panel2); border:1px solid var(--line); border-radius:11px; padding:11px 14px}
+.mini .n{font-weight:600; font-size:14.5px; color:var(--ink)}
+.mini .n .sub{display:block; font-weight:400; font-size:13px; color:var(--ink-dim); margin-top:2px}
+.mini .r{text-align:right; white-space:nowrap}
+.mini .r .p{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:15px; color:var(--pitch)}
+.mini .r .pr{font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--ink-faint); margin-top:2px}
+.ls-row .r .p{color:var(--violet)}
+.model-line{font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--ink-dim); line-height:1.5;
+  background:var(--bg2); border:1px solid var(--line); border-radius:9px; padding:11px 14px; white-space:normal; word-wrap:break-word}
+
+footer{margin-top:48px; border-top:1px solid var(--line); padding-top:24px}
+.disclaimer{font-size:13px; color:var(--ink-faint); background:var(--panel); border:1px solid var(--line);
+  border-radius:12px; padding:16px 18px}
 .disclaimer b{color:var(--ink-dim)}
-@media(max-width:720px){.cod{grid-template-columns:1fr}.bet{grid-template-columns:auto 1fr}.bet .meta{grid-column:2;text-align:left;margin-top:6px}.mtab{font-size:12.5px}}
+@media(max-width:720px){ .cod{grid-template-columns:1fr} .bet{grid-template-columns:auto 1fr; } .bet .meta{grid-column:2; text-align:left; margin-top:6px} }
 </style>
 </head>
 <body>
 <header class="hero"><div class="wrap hero-inner">
-  <span class="eyebrow"><span class="dot"></span> Round of 32 &middot; Tue June 30 &middot; Discipline day</span>
-  <h1>World Cup <span class="accent">Deep Edge Report</span></h1>
-  <p class="sub" id="hero-sub">Loading&hellip;</p>
+  <span class="eyebrow"><span class="dot"></span> <span id="hero-eyebrow">Loading…</span></span>
+  <h1>World Cup <span class="accent">Edge Report</span></h1>
+  <p class="sub" id="hero-sub">Loading…</p>
   <div class="stamp" id="hero-stamp"></div>
 </div></header>
+
 <main class="wrap" id="app"></main>
+
 <footer class="wrap"><div class="disclaimer" id="disclaimer"></div></footer>
+
 <script>
-const DATA = {
-  "meta": {
-    "heroSub": "Yesterday humbled the model — two of three went to penalties and both favourites we backed lost the shootout. The lesson: when the sharp market strongly disagrees with Nate Silver's PELE, the market usually wins. Today the market sits well below PELE on all three favourites again — so this is a discipline card. We side with the market, fade the over-rated favourites, and back the dogs the price respects.",
-    "chips": ["3 games · Jun 30","Model: market-checked PELE + Poisson","Price: Kalshi + DraftKings","Odds pulled ~10:15am ET Jun 30","Yesterday: market beat PELE — so we follow it"],
-    "banner": "<b>Kickoffs.</b> Côte d'Ivoire–Norway <b>1:00pm ET</b> (AT&amp;T dome), France–Sweden <b>5:00pm ET</b> (MetLife), Mexico–Ecuador <b>9:00pm ET</b> (Estadio Azteca, 7,349ft). CIV–NOR &amp; FRA–SWE XIs lock shortly; reprice and re-confirm before betting.",
-    "disclaimer": "<b>Method:</b> Edge = our model probability (a market-checked read that blends PELE, an independent Poisson, and fresh news) vs the de-vigged price. After yesterday — where trusting PELE over the market cost us on the Netherlands — we treat PELE's June-28 snapshot as a PRIOR and defer to the sharp market and Opta where they disagree. <b>Knockout settlement:</b> h2h / draw / handicap / total / BTTS / all props = REGULATION (90 min + stoppage); 'to qualify' = ADVANCEMENT (incl. extra time + penalties). <b>Variance is real and any single bet can lose</b> — yesterday proved it. Bet only on legal books where you are, only what you can afford to lose, and reprice at kickoff. Not financial advice.",
-    "footerNote": "PELE data: Nate Silver / Silver Bulletin."
-  },
-  "reportCard": {
-    "intro": "Full transparency on yesterday (Jun 29). The headline: <b>2 of 3 went to penalties and both favourites we backed lost the shootout.</b> Net ≈ a breakeven-to-losing day, with sharp lessons now baked into today's card.",
-    "games": [
-      {"cls":"win","title":"Brazil 2–1 Japan","res":"Brazil advanced in regulation — STRONG","rows":[
-        {"t":"W","x":"Brazil to qualify −285"},{"t":"W","x":"Brazil 2–1 correct score +750 (longshot HIT)"},{"t":"W","x":"Japan +1.5"},{"t":"L","x":"Ueda anytime +360 — midfielder Sano scored, not the striker"}]},
-      {"cls":"mix","title":"Germany 1–1 Paraguay → Paraguay won pens","res":"The FADE was vindicated; our execution wasn't — MIXED","rows":[
-        {"t":"W","x":"Paraguay +1.5 · Draw +400 · Paraguay-or-Draw +205 · Under 2.5 · Havertz anytime"},{"t":"L","x":"BTTS-No (our 'top play') — Enciso headed a corner"},{"t":"K","x":"We KILLED Enciso scorer +550 (he scored) and Paraguay-to-advance +450 (they advanced)"}]},
-      {"cls":"loss","title":"Netherlands 1–1 Morocco → Morocco won pens","res":"Our headline was wrong on every leg — LOSS","rows":[
-        {"t":"L","x":"NED to win +130 · NED to qualify −155 · Saibari +265 (a CB, Issa Diop, scored off a cross)"},{"t":"W","x":"We correctly killed BTTS-No (it was 1–1)"}]}
-    ],
-    "lessons": "<b>Four lessons, now applied:</b> (1) When the sharp market strongly disagrees with PELE, respect the market — it knows news/intangibles PELE's snapshot misses. (2) Cagey knockouts reach ET/pens constantly — dog +1.5 / draw / dog-to-advance are systematically live. (3) 'Can't score' dies to set pieces — both dog goals were headers; we stop killing mechanism-backed dog scorers. (4) Home crowd + a shootout keeper are real and market-priced."
-  },
-  "slateRead": {
-    "narrative": "Today the market disagrees with PELE on all three favourites — and after yesterday, that's a signal, not noise. The research validated the market every time: <b>Norway is over-rated by PELE</b> (one clean sheet in ten games, a right-back hole with Ryerson out; Opta agrees at ~56% not 65%). <b>France will win but Sweden will score</b> (Gyökeres + Isak both start; France conceded five to the Netherlands and are missing nothing — so the both-score, dog-covers angle is live). <b>Mexico is not as dominant as PELE's home-inflated number</b> (the Azteca altitude edge is blunted because Ecuador is an Andean side, and Ecuador are elite defensively). So the card is built on the dogs the market correctly respects: Côte d'Ivoire +1.5, Sweden +1.5, and a low-scoring Mexico–Ecuador.",
-    "mispricingTable": [
-      {"game":"Côte d'Ivoire–Norway","model":"NOR 47 / Draw 28 / CIV 25 (we side w/ market)","market":"NOR 45.8 / 28.1 / 26.1 · PELE had NOR 65","edge":"PELE was stale-high; CIV +1.5 the play","cls":"big"},
-      {"game":"France–Sweden","model":"FRA 74 / Draw 16 / SWE 10 · BTTS-Yes 55","market":"FRA 74.7 / 16.1 / 9.2 · PELE had FRA 83","edge":"Sweden scores; back Sweden +1.5 / BTTS","cls":"med"},
-      {"game":"Mexico–Ecuador","model":"MEX 43 / Draw 31 / ECU 26 · Under 70%","market":"MEX 41.9 / 33.8 / 24.4 · PELE had MEX 53","edge":"Cagey/low-scoring; Under + Ecuador value","cls":"med"}
-    ]
-  },
-  "cardOfDay": {
-    "title": "Côte d'Ivoire +1.5 (−135, DraftKings)",
-    "body": "The cleanest edge on the board and a direct application of yesterday's lessons. PELE's stale snapshot had Norway at 65% — but the market (45.8%) and Opta (56%) both rate this near a coin-flip, and the research says why: Norway has kept just ONE clean sheet in ten games, shipped four to France, and has a makeshift right-back (Ryerson out) against Côte d'Ivoire's pacey, European-based front line. CIV scored first in all three group games and trailed for barely three minutes of the entire group stage. In the classic 'leaky favourite, competitive dog' knockout spot — exactly where dog +1.5 was a winner across the board yesterday — we make CIV +1.5 a 65% proposition vs the −135 breakeven of 57%. A ~7–8 point edge. Just don't over-stack the correlated CIV plays on top of it.",
-    "longshotTitle": "The dog scorers we refuse to kill",
-    "longshotBody": "Yesterday we killed two dog scorers (Enciso +550, then a CB headed it) who would have won — the set-piece lesson. So today, mechanism-backed dog scorers stay on the board: <b>Nicolás Pépé (CIV, +330)</b> — left-footed cut-in shooter and set-piece taker against a Norway side that lost its dead-ball man; <b>Yan Diomandé (CIV, +450)</b> — CIV's chief ball-carrier at the makeshift Norway right-back; <b>Gonzalo Plata (ECU, +350)</b> — scored the winner that beat Germany and shares Ecuador's set-piece duties. Small stakes, real mechanisms."
-  },
-  "topSingles": [
-    {"game":"Côte d'Ivoire–Norway","bet":"Côte d'Ivoire +1.5 (handicap)","type":"handicap","price":"−135 DK","marketPct":"57.4%","ourPct":"65%","confidence":"solid","rationale":"Leaky Norway (one clean sheet in ten, RB hole) vs a competitive dog. ~7.6pt edge — the cleanest play on the slate and the systematically-live dog +1.5 spot."},
-    {"game":"France–Sweden","bet":"Sweden +1.5 (handicap)","type":"handicap","price":"+100 DK","marketPct":"50%","ourPct":"57%","confidence":"solid","rationale":"Plus-money on the dog covering. France's modal outcomes are 2-1/3-1/2-0; with Gyökeres + Isak both starting, Sweden stays within one or scores. Caveat: a France blowout (3-0/4-0) is the risk."},
-    {"game":"Mexico–Ecuador","bet":"Under 2.5 total goals","type":"total","price":"~−145","marketPct":"68.5%","ourPct":"70%","confidence":"solid","rationale":"Ecuador scored just 2 goals all group and are elite defensively; Mexico kept 3 clean sheets; cagey knockout at 7,349ft. Modest edge but rock-solid mechanism — the verifier's top play."},
-    {"game":"France–Sweden","bet":"Both Teams To Score — Yes","type":"btts","price":"−110 DK","marketPct":"54.5%","ourPct":"55%","confidence":"lean","rationale":"Sweden's strikers (Gyökeres + Isak) both start and France conceded 5 to the Netherlands (and Sweden's CB Isak Hien is out). The correctly market-sided read vs PELE's clean-sheet number."},
-    {"game":"Mexico–Ecuador","bet":"Ecuador to qualify (advance, incl. ET + pens)","type":"to advance","price":"+140 DK","marketPct":"39.6%","ourPct":"44%","confidence":"lean","rationale":"Captures ET+penalties in a cagey game with a ~31% draw. Ecuador's defensive resilience drags this toward a shootout where a dog has real equity. Plus-money on a live path."}
-  ],
-  "longshots": [
-    {"game":"Côte d'Ivoire–Norway","bet":"Nicolás Pépé anytime scorer (CIV)","price":"+330 DK","mechanism":"Left-footed cut-in shooter + set-piece/corner taker vs a Norway side that lost its dead-ball man. The aerial/set-piece mechanism that beat us yesterday."},
-    {"game":"Côte d'Ivoire–Norway","bet":"Yan Diomandé anytime scorer (CIV)","price":"+450 DK","mechanism":"CIV's chief ball-carrier (10 chances created in the group) running at Norway's makeshift right-back; piles up looks whether CIV leads or chases."},
-    {"game":"France–Sweden","bet":"Viktor Gyökeres anytime scorer (SWE)","price":"~+225","mechanism":"Sweden's lead striker, 5 shots in each group game; as the lone chaser vs France's high line he gets central looks. Do-not-kill dog scorer."},
-    {"game":"Mexico–Ecuador","bet":"Gonzalo Plata anytime scorer (ECU)","price":"+350 DK","mechanism":"Scored the 78' winner that beat Germany, shares set-piece duties, lively in transition — Ecuador's most likely open-play goal."},
-    {"game":"France–Sweden","bet":"France 3-1 correct score","price":"~+750","mechanism":"The modal non-clean-sheet scoreline — France wins comfortably but Sweden's strikers nick one. Captures both theses (France wins, Sweden scores)."}
-  ],
-  "shots": {
-    "intro": "The cross-team shots play returns — back the favourite to win/advance + an OPPONENT chaser's SHOTS OVER. Books price these as anti-correlated (favourite dominant → dog smothered) using a goals/SOG intuition, but a trailing team's shot VOLUME rises as it chases. The standalone shot lines below are the cleaner expressions; the cross-team SGPs are in the parlay section.",
-    "standalone": [
-      {"game":"France–Sweden","bet":"Viktor Gyökeres OVER 2.5 total shots","price":"~Even (verify)","read":"5 shots in EACH group game (10 total, 89th pct). As the lone #9 for a side that will trail and chase France all night, his volume only climbs — independent of the result.","conf":"solid"},
-      {"game":"Mexico–Ecuador","bet":"Raúl Jiménez OVER 1.5 total shots","price":"~−120 DK","read":"Mexico's focal point + penalty/set-piece taker on a side taking ~11.6 shots/game with 60%+ possession at home. High floor even in a low-scoring game.","conf":"solid"},
-      {"game":"Côte d'Ivoire–Norway","bet":"Erling Haaland OVER 1.5 shots on target","price":"−152 DK","read":"1.5+ SOG in six straight, 4 goals in 2 games. The cleanest individual angle even if Norway's team result is shaky.","conf":"lean"},
-      {"game":"Côte d'Ivoire–Norway","bet":"Nicolás Pépé OVER 1.5 total shots","price":"~Even (verify)","read":"CIV's true volume shooter (2.36 sh/90, 87th pct) and set-piece taker — climbs further if CIV chases a Haaland opener.","conf":"lean"}
-    ]
-  },
-  "sgps": [
-    {"kind":"standard","game":"Côte d'Ivoire–Norway","thesis":"Leaky Norway concedes, CIV stays within one.","legs":["Côte d'Ivoire +1.5 (−135)","Both Teams To Score — Yes"],"correlation":"Both legs share one game-state: a one-goal-ish game where Norway's leaky defence concedes (BTTS) and CIV stays within +1.5. If CIV scores — what makes BTTS hit — they're almost always also within the handicap. Positively correlated, so the book's near-independent price is soft."},
-    {"kind":"cross-team shots","game":"France–Sweden — the #4 play","thesis":"France advances while the chasing Swede fills his shot count.","legs":["France to qualify (advance)","Viktor Gyökeres OVER 2.5 total shots (reg)"],"correlation":"The book prices 'France dominant → Gyökeres quiet' as offsetting, on a goals/SOG intuition. But a trailing Sweden chases and Gyökeres — the lone striker — takes MORE shots (volume), not fewer. The legs are closer to independent/positive, so the bundle is +EV. Use total shots, not SOG."},
-    {"kind":"standard","game":"France–Sweden","thesis":"The modal France 2-1 / 3-1 in one ticket.","legs":["France to qualify (advance)","Sweden +1.5 (handicap)","Over 2.5 total goals"],"correlation":"All three live in the same France 2-1/3-1/2-0 world: France advances (~89%), the margin stays inside 1–2 goals so Sweden +1.5 covers, and both attacks scoring pushes the total over 2.5. One script, three legs."},
-    {"kind":"cross-team shots","game":"Mexico–Ecuador","thesis":"Mexico edges it while Ecuador's striker keeps shooting.","legs":["Mexico to win / −0.5 / to qualify","Enner Valencia OVER 1.5 total shots (reg)"],"correlation":"Book treats 'Mexico wins' and 'Ecuador's forward shoots a lot' as offsetting; but a chasing Ecuador pushes Valencia's attempts up even while losing. Volume, not SOG. Marginal-to-recommend depending on the posted shot line."}
-  ],
-  "taxonomy": {
-    "intro": "The knockout taxonomy that decided yesterday (two games went to penalties): know exactly which clock you're betting. Backing the <b>Draw</b> bets 'this reaches extra time'; <b>'to qualify'</b> is the only market that pays for surviving penalties; every <b>player prop</b> counts the 90 minutes + stoppage only.",
-    "rows": [
-      {"market":"h2h (1X2)","clock":"reg","settles":"Regulation, 90 min + stoppage. Draw is live.","attack":"Back a side on a reg-% edge; back the Draw to bet 'goes to ET'."},
-      {"market":"to_qualify","clock":"adv","settles":"ADVANCEMENT — incl. extra time + penalties.","attack":"Clean favourite play (France to qualify) or the dog's shootout path (Ecuador +140)."},
-      {"market":"handicap / total / BTTS / double_chance","clock":"reg","settles":"Regulation only.","attack":"CIV +1.5, Sweden +1.5, Under 2.5, BTTS-Yes — all 90-minute reads."},
-      {"market":"player props (scorer / shots / SOG)","clock":"reg","settles":"Regulation, 90 min + stoppage — NOT extra time.","attack":"Gyökeres / Jiménez shots, the dog-scorer longshots."}
-    ]
-  },
-  "startSit": "<b>France</b> (5pm) — FULL STRENGTH, no rotation: Maignan; Koundé, Upamecano, Saliba (back from rest), T.Hernández; Tchouaméni, Rabiot; Dembélé, Olise, Doué; <b>Mbappé starts</b>. <b>Sweden</b> — <b>Gyökeres AND Isak both start</b> (front three with Elanga); CB <b>Isak Hien is OUT</b> (hamstring) → weaker Swedish defence, so France scores freely but Sweden's strikers give BTTS-Yes a floor. <b>Norway</b> (1pm) — Haaland + Ødegaard fit and starting (the market's bearishness is structural, not a missing star); <b>RB Ryerson OUT</b> → makeshift right side. <b>Côte d'Ivoire</b> — full European-based front line (Pépé, Amad, Diomandé, Bonny). <b>Mexico</b> (9pm) — Aguirre's side at home; Raúl Jiménez/Santiago Giménez lead the line. <b>Ecuador</b> — elite defensive block, Valencia + Plata the threats. <b>All XIs PROJECTED until ~75 min pre-kickoff — reprice then.</b>",
-  "games": [
-    {
-      "matchup": "Côte d'Ivoire vs Norway",
-      "venue": "AT&T Stadium · Arlington TX (indoor dome, fast surface, neutral)",
-      "ko": "Tue Jun 30 · 1:00pm ET",
-      "archetype": "★ MARKET > PELE · BACK THE DOG",
-      "archClass": "flip",
-      "lineupNote": "<b>PROJECTED.</b> Norway: Haaland + Ødegaard fit and STARTING — the 20-point market-vs-PELE gap is structural, not a missing star. <b>RB Ryerson OUT</b> → makeshift right side (Aursnes/Aasgaard reshuffle). Côte d'Ivoire: full European-based front line — Pépé, Amad Diallo, Yan Diomandé, Bonny; Kessié/Sangaré control midfield.",
-      "incentive": "<b>Norway</b> are the nominal favourite but PELE (65%) badly over-rates them — one clean sheet in ten games, shipped four to France. <b>Côte d'Ivoire</b> took 6 group points, beat Ecuador, troubled Germany, and trailed for barely three minutes of the whole group stage. A neutral dome means no Norway crowd and no shootout-keeper edge in a likely-tight game.",
-      "ourRead": "This is the headline application of yesterday's lesson: the market (Norway ~46%) and Opta (~56%) both rate this near a coin-flip, and the research says why — leaky Norway, a right-back hole, and a genuinely competitive CIV. We side with the market: Norway 47 / Draw 28 / CIV 25. The cleanest edge is <b>Côte d'Ivoire +1.5</b> against a favourite that cannot keep clean sheets. Mechanism-backed CIV dog scorers stay live (Pépé/Diomandé/Amad).",
-      "model": "Our read: NOR 47 · Draw 28 · CIV 25 | advance 62/38 | total 2.65 · BTTS-Y 57 || Market 45.8/28.1/26.1 · Opta NOR 56 · PELE (stale) 65/22/13",
-      "singles": [
-        {"bet":"Côte d'Ivoire +1.5 (handicap)","price":"−135 DK","marketProb":"57.4%","modelProb":"65%","confidence":"solid","rationale":"Leaky Norway + competitive dog; ~7.6pt edge. The slate's cleanest play."},
-        {"bet":"Côte d'Ivoire or Draw (double chance)","price":"−145 DK","marketProb":"59.2%","modelProb":"63%","confidence":"lean","rationale":"Covers a CIV win or a draw into ET on a neutral site. ~4pt — a smaller lean."}
-      ],
-      "longshots": [
-        {"bet":"Nicolás Pépé anytime scorer","price":"+330 DK","mechanism":"Set-piece taker + cut-in shooter vs a Norway side that lost its dead-ball man."},
-        {"bet":"Yan Diomandé anytime scorer","price":"+450 DK","mechanism":"Runs at the makeshift Norway RB; CIV's chief chance creator."}
-      ],
-      "shotsPlays": "Haaland SOG O1.5 −152 (lean) · Pépé shots O1.5 (lean). Cross-team SGP: Norway to advance + Pépé/Diomandé shots over.",
-      "sgp": {"thesis":"Leaky Norway concedes; CIV stays within one.","legs":["Côte d'Ivoire +1.5 (−135)","Both Teams To Score — Yes"],"correlation":"Same game-state: Norway concedes (BTTS) and CIV stays within +1.5. Positively correlated, so the near-independent price is soft."},
-      "incentiveAngle": "AVOID over-stacking — CIV +1.5, CIV-or-Draw and the CIV scorers all need the same 'CIV stays competitive' state. Pick one or two, don't pile the whole bankroll on one correlated thesis."
-    },
-    {
-      "matchup": "France vs Sweden",
-      "venue": "MetLife Stadium · East Rutherford NJ (open-air, neutral)",
-      "ko": "Tue Jun 30 · 5:00pm ET",
-      "archetype": "FRANCE WINS · SWEDEN SCORES",
-      "archClass": "over",
-      "lineupNote": "<b>PROJECTED.</b> France FULL STRENGTH (no rotation): Maignan; Koundé, Upamecano, Saliba, T.Hernández; Tchouaméni, Rabiot; Dembélé, Olise, Doué; <b>Mbappé starts.</b> Sweden: <b>Gyökeres + Isak both start</b> (front three w/ Elanga); CB <b>Isak Hien OUT</b> (hamstring).",
-      "incentive": "<b>France</b> (Group I winners) are a genuine title contender and at full strength — but PELE's 83% is stale; market + Opta both ~75%. <b>Sweden</b> are the tournament's weakest advancer on paper, but a Gyökeres–Isak strike pair is real and France's defence shipped five to the Netherlands.",
-      "ourRead": "France win — that's not in doubt (we KILL France to qualify −800, no value laying that juice). The market-sided edge is that <b>Sweden will score and stay within range</b>: PELE expects a France clean sheet (Sweden λ 0.5) but the market prices BTTS-Yes 54.5, and with both Swedish strikers starting we agree. France's modal outcomes are 2-1/3-1/2-0, so <b>Sweden +1.5</b> at plus money and <b>BTTS-Yes</b> are the plays. The risk: France blows it open early (3-0/4-0), which busts both — so size accordingly. Gyökeres shots-over is the cleaner, result-independent angle.",
-      "model": "Our read: FRA 74 · Draw 16 · SWE 10 | advance 89/11 | total 3.35 · BTTS-Y 55 || Market 74.7/16.1/9.2 · Opta FRA 75 · PELE (stale) 83/13/4",
-      "singles": [
-        {"bet":"Sweden +1.5 (handicap)","price":"+100 DK","marketProb":"50%","modelProb":"57%","confidence":"solid","rationale":"Plus-money dog cover; France's modal 2-1/3-1, both Swedish strikers fit. Blowout is the risk."},
-        {"bet":"Both Teams To Score — Yes","price":"−110 DK","marketProb":"54.5%","modelProb":"55%","confidence":"lean","rationale":"Gyökeres + Isak start; France conceded 5 to NED. Market-sided vs PELE's clean-sheet number."}
-      ],
-      "longshots": [
-        {"bet":"Viktor Gyökeres anytime scorer","price":"~+225","mechanism":"Lone striker, 5 shots each group game; central looks vs France's high line."},
-        {"bet":"France 3-1 correct score","price":"~+750","mechanism":"Modal non-clean-sheet line — France wins comfortably, Sweden nicks one."}
-      ],
-      "shotsPlays": "Gyökeres O2.5 total shots ~even (solid — lone chaser, 5 shots/game). Cross-team SGP: France to qualify + Gyökeres O2.5 shots.",
-      "sgp": {"thesis":"The modal France 2-1/3-1 in one ticket.","legs":["France to qualify (advance)","Sweden +1.5 (handicap)","Over 2.5 total goals"],"correlation":"One script: France advances, margin stays 1–2 so Sweden +1.5 covers, both attacks score → over 2.5."},
-      "incentiveAngle": "Don't lay the −800 France-to-qualify juice (no edge) and don't take France −1.5 (PELE liked it, but at full strength vs a side that still scores, the dog-cover side is better value). The shot-volume play (Gyökeres) is the one that survives a France blowout."
-    },
-    {
-      "matchup": "Mexico vs Ecuador",
-      "venue": "Estadio Azteca · Mexico City (7,349ft — highest WC venue, Mexico home crowd)",
-      "ko": "Tue Jun 30 · 9:00pm ET",
-      "archetype": "CAGEY · LOW-SCORING",
-      "archClass": "under",
-      "lineupNote": "<b>PROJECTED.</b> Mexico (Aguirre, Group A winners, perfect record) at home: Raúl Jiménez / Santiago Giménez lead; primary set-piece + penalty threat. Ecuador: elite defensive block (best-3rd, beat Germany), Enner Valencia + Gonzalo Plata the threats.",
-      "incentive": "<b>Mexico</b> have the Azteca crowd and altitude — but PELE's home-inflated 53% overstates it: the market (42%) and our Poisson (43%) agree it's tighter, because Ecuador are an Andean side (less altitude-disadvantaged) and elite defensively. <b>Ecuador</b> conceded the fewest in their group and have a real shootout path.",
-      "ourRead": "The one game where PELE, the market and our Poisson all agree it's <b>low-scoring</b> (Under ~67–70%, draw ~31%). Ecuador scored just 2 goals all group; Mexico kept 3 clean sheets. Add a cagey knockout at 7,349ft and the <b>Under 2.5</b> is the high-conviction read. We do NOT back Mexico to advance (−175) — PELE over-rates them; the dog value is <b>Ecuador to qualify (+140)</b>, capturing the ~31% draw → ET/penalties. Mechanism-backed dog scorers (Valencia, Plata) stay live.",
-      "model": "Our read: MEX 43 · Draw 31 · ECU 26 | advance 60/40 | total 2.05 · Under 2.5 ~70% || Market 41.9/33.8/24.4 · PELE (stale, home-inflated) 53/31/16",
-      "singles": [
-        {"bet":"Under 2.5 total goals","price":"~−145","marketProb":"68.5%","modelProb":"70%","confidence":"solid","rationale":"Ecuador 2 goals all group, Mexico 3 clean sheets, cagey altitude knockout. High-conviction mechanism."},
-        {"bet":"Ecuador to qualify (advance)","price":"+140 DK","marketProb":"39.6%","modelProb":"44%","confidence":"lean","rationale":"Captures ET+pens in a ~31%-draw game; Ecuador's resilience drags it toward a shootout. Plus-money live path."}
-      ],
-      "longshots": [
-        {"bet":"Gonzalo Plata anytime scorer (ECU)","price":"+350 DK","mechanism":"Scored the winner that beat Germany; set-piece taker — Ecuador's most likely open-play goal."},
-        {"bet":"Enner Valencia anytime scorer (ECU)","price":"+300 DK","mechanism":"Ecuador's focal point; the dog scorer we refuse to kill after yesterday."}
-      ],
-      "shotsPlays": "Raúl Jiménez O1.5 total shots ~−120 (solid — Mexico focal point). Cross-team SGP: Mexico to win + Valencia shots over.",
-      "sgp": {"thesis":"Tight, low-event game Ecuador absorbs.","legs":["Ecuador to qualify (advance) +140","Under 2.5 total goals","Enner Valencia 1+ shots on target"],"correlation":"One game-state: a low-event match Ecuador absorbs and drags to ET, with Valencia padding shot volume as the focal point. The legs share the cagey-game root cause."},
-      "incentiveAngle": "Taxonomy showcase: Mexico's reg-win (43%) and to-advance (~60%) gap is the widest on the slate — but we fade BOTH (PELE over-rates Mexico). The clean read is the Under and the dog's ET/penalty equity, not the Mexican favourite."
-    }
-  ]
-};
+/* DATA is injected below. Render engine builds the whole guide from it. */
+const DATA = {"meta": {"eyebrow": "Round of 32 · Knockout Stage", "heroSub": "World Cup 2026 · Round of 32 · one pre-match game tonight, two already underway", "chips": ["Wed Jul 1, 2026", "3 games · knockout", "Odds pulled ~4:00-4:15 PM ET (Kalshi only)", "Model: PELE blend + Dixon-Coles Poisson"], "liveBanner": "LIVE: England 2-1 DR Congo (FINAL) · Belgium 0-0 Senegal (in progress, kicked off 4:00 PM ET) — tonight's only pre-match game is USA vs Bosnia-Herzegovina, 8:00 PM ET", "disclaimer": "Edge = our independent projection vs. the de-vigged market price, not one book vs. another. A “solid” tag means the <i>price</i> looks a touch wrong — every +EV bet still loses a large share of the time. DraftKings/The Odds API was unavailable this run (no API key configured) — every price below is Kalshi-only, with no second book to cross-check. USA-Bosnia lineups are PROJECTED (XIs lock ~75 min pre-kick, ~6:45 PM ET) — reconfirm before you stake. Bet only legal books, only what you can afford to lose."}, "narrative": "Three Round of 32 games today, but the timing gate leaves only one of them pre-match bettable by the time this guide publishes. England beat DR Congo 2-1 (Kane's 75th-minute header and 86th-minute finish erased Brian Cipenga's early strike) — already final, reference only. Belgium and Senegal kicked off at 4:00 PM ET, essentially the same moment this guide was being built — PELE and the market both read that tie as a near-exact coin flip (PELE: 34.8/29.8/35.3, advance split an even 50/50), included below as live context, not a pick. That leaves USA vs Bosnia-Herzegovina (8:00 PM ET, Levi's Stadium) as tonight's entire pre-match card, and after a full research → projection → props → adversarial-verify pass, the honest read is that the market has it right almost everywhere: PELE, Kalshi, and Opta's supercomputer all cluster USA's win probability within 4 points of each other, and the advance market is just as tight. The one gap that looked real early — the market apparently pricing a 60%+ chance USA wins by two or more goals, against our model's ~48% — turned out to be a de-vig bug in how a nested goal-margin ladder was being normalized (fixed this run; see the data-gaps note). Corrected, the market's own raw price on USA -1.5 sits at ~47-48%, matching PELE (47.6%) almost exactly. No single clears the bar tonight — the two correct-score longshots below are the closest thing to a real angle.", "themes": [{"cls": "flip", "txt": "MARKET IS SHARP TONIGHT — PELE, Kalshi, and Opta all land within 4pts on USA-BIH's moneyline and advance markets; a Kalshi data-normalization bug briefly looked like a spread edge, corrected on review — no forced single."}, {"cls": "over", "txt": "USA'S SPINE RETURNS — Balogun, Adams, and Richards are back after a rotated, immaterial loss to Türkiye; Bosnia have never posted a World Cup clean sheet in six tries."}, {"cls": "flip", "txt": "TWO GAMES ALREADY LIVE/FINAL — England 2-1 DR Congo is final and Belgium-Senegal kicked off before this guide published; neither is presented as a pre-match pick today."}], "cardOfDay": {"title": "No Forced Single Tonight — the Market's Sharp", "body": "USA vs Bosnia-Herzegovina is the only pre-match game on the board, and after resolving every model-vs-market gap it's priced tightly across the board: our blended 1X2 (71.1/19.0/9.8) and advance number (83.7%) land within a point or two of Kalshi's de-vigged prices (71.1/18.4/10.5, advance 83.5%) and Opta's independent supercomputer read (67.5/18.3/14.3, advance 76.6%). Total-goals (blend 56.2% vs market 59.5%) and BTTS (blend 46.2% vs market 49.5%) show soft, single-digit leans that don't clear our bar for a real pick. And the one gap that looked real early — the market apparently pricing a 60%+ chance USA wins by two or more goals, against our model's ~48-52% — turned out to be a data-normalization artifact in how Kalshi's nested goal-margin ladder (\"wins by 2+\" and \"wins by 3+\" aren't mutually exclusive outcomes, so they can't be summed to 100%) was being de-vigged. Fixed and re-pulled, the market's own raw price on USA -1.5 is ~47-48%, matching PELE's 47.6% almost exactly. No edge survives adversarial review. Zero forced singles is the honest, disciplined call tonight.", "longshotTitle": "Correct Score: USA 1-0 (Reg Time) — ~12¢ ask (Kalshi, fair ~11.4%)", "longshotBody": "The one place PELE still meaningfully outruns the market: our model gives a clean 1-0 USA scoreline 13.8% vs. the market's de-vigged 11.4%, a ~2.4pt gap. It's the scoreline that fits Bosnia's actual profile — the tallest, most physical side in the tournament, with 3 goals from corners this cycle, and a track record of grinding out win-or-go-home ties (they beat Italy in the playoffs just to reach this World Cup) — surviving to keep it a single-goal game even though they've never posted a World Cup clean sheet in six tries. Small-stake, model-supported, not a lock."}, "bestSingles": [], "bestLongshots": [{"game": "USA vs Bosnia-Herzegovina", "bet": "Correct score 1-0 USA (Reg Time)", "price": "~12¢ ask (Kalshi, fair ~11.4%)", "mechanism": "PELE 13.8% vs. market 11.4% — the “USA controls, wins by exactly one, Bosnia's set-piece/grind mechanism keeps it tight” scoreline. Kalshi-only; no DK cross-check available this run."}, {"game": "USA vs Bosnia-Herzegovina", "bet": "Correct score 2-0 USA (Reg Time)", "price": "~13¢ ask (Kalshi, fair ~12.4%)", "mechanism": "PELE's single most-likely scoreline (12.0%) and inside the Poisson top-2 (14.1%); market price (12.4% fair) is a near-exact match — a clean, well-priced longshot on the model's own game script rather than a mispricing. Small-stake."}], "bestSGPs": [], "gdSpecial": "No goal-differential lever tonight — every remaining game is single-elimination Round of 32, so there's no group-stage GD/qualification math left to chase. What replaces it: the draw is a 90-minute regulation outcome only, and the only market that pays for surviving extra time and penalties is <b>to-advance</b> (KXWCADVANCE), not the moneyline, spread, total, or BTTS. Tonight, USA's advance price (Kalshi fair 83.5%, PELE 84.0%, blend 83.7%) is just as efficiently priced as their 90-minute moneyline — no edge there either. If Bosnia's grind mechanism (physicality, set pieces, a track record of gutting out knockout ties on the way to this tournament) is going to pay off, it shows up in the “wins by exactly one” correct-score longshot above, not in a free handicap or draw bet.", "startSit": "<b>USA vs Bosnia-Herzegovina (8:00 PM ET) — PROJECTED, lineups lock ~6:45 PM ET, reconfirm before staking.</b> USA (4-2-3-1): Freese; Freeman, Richards, Ream, Robinson; Adams, Tillman; Dest, McKennie, Pulisic; Balogun. Adams, Balogun and Richards return to the XI after being rotated in the dead-rubber loss to Türkiye; Pulisic (calf management) played 30+ minutes in that game and is a projected starter, not a downgrade. Bosnia (4-4-2): Vasilj; Dedic/Malic, Katic, Muharemovic, Kolasinac; Bajraktarevic, Sunjic, Basic, Alajbegovic; Demirovic, Dzeko — no reported injuries or suspensions, full-strength XI expected. <b>Belgium vs Senegal (kicked off 4:00 PM ET, in progress) — lineups CONFIRMED at kickoff.</b> Belgium (4-2-3-1): Courtois; Castagne, Theate, Mechele, De Cuyper; Tielemans, Vanaken; Doku, De Bruyne, Trossard; De Ketelaere — Lukaku left out of the XI, De Ketelaere playing false-9. Senegal (4-3-3): Diaw; Diatta, Ciss, Niakhaté, Jakobs; Diarra, Idrissa Gueye, Pape Gueye; Ndiaye, Sarr, Mané — No. 1 keeper Édouard Mendy is unavailable (knee injury vs. Norway); Mory Diaw deputizes. <b>England vs DR Congo — FINAL.</b> Bellingham (19') and Sadiki (28') were both booked; no other disciplinary or injury news of note from the match.", "games": [{"matchup": "USA vs Bosnia-Herzegovina", "venue": "Levi's Stadium, Santa Clara (USA co-host — de-facto home crowd)", "ko": "8:00 PM ET", "archetype": "Efficiently-priced favorite — no forced single, longshots only", "archClass": "flip", "lineupNote": "PROJECTED, not confirmed (lineups lock ~6:45 PM ET, ~75 min pre-kick). USA 4-2-3-1: Freese; Freeman, Richards, Ream, Robinson; Adams, Tillman; Dest, McKennie, Pulisic; Balogun — Adams/Balogun/Richards return from group-stage rotation, Pulisic projected fit after calf management. Bosnia 4-4-2: Vasilj; Dedic/Malic, Katic, Muharemovic, Kolasinac; Bajraktarevic, Sunjic, Basic, Alajbegovic; Demirovic, Dzeko — no reported injuries/suspensions, full-strength XI expected. Re-confirm both XIs at lineup lock.", "incentive": "Literal win-or-go-home for both sides (Round of 32). No rest/fatigue/travel edge either way — USA last played Jun 25 (6 days rest), Bosnia last played Jun 26 (5-6 days rest), both standard knockout-round turnarounds.", "ourRead": "USA are the clearly better side (PELE rating gap ~197 with home field; three independent sources — PELE, Kalshi, Opta — all cluster USA's win probability 67-71% and advance 76-84%, no daylight there) and the full-strength attacking spine (Balogun, Adams, Richards) returns after a rotated, immaterial loss to Türkiye. Bosnia have never kept a World Cup clean sheet in six tries and specifically leak on shots inside the box — exactly where Balogun/Pulisic operate — so a USA goal or two arriving is the base case. But Bosnia aren't passive: they're the tallest squad at the tournament with 3 goals from corners this cycle, and their entire route to this World Cup (beating Italy in the playoffs) was built on grinding, physical, win-or-go-home resilience. Once a Kalshi de-vig artifact on the spread ladder was corrected, the market's own number agrees with PELE that a routine 2+ goal margin is roughly a coin flip (~47-48%), not the 60%+ blowout it briefly appeared to price — so there's no real fade to make there either. Primary script: USA controls the ball and creates the better chances; alternate script (~15-20%): Bosnia snatches a set-piece goal and grinds for penalties, their proven path to even reaching this tournament.", "model": "Blended 1X2: USA 71.1% / Draw 19.0% / BIH 9.8% — essentially identical to Kalshi's de-vigged 71.1/18.4/10.5 and Opta's supercomputer read (67.5/18.3/14.3); no edge on the moneyline or the 83-84% advance number either. USA -1.5 (win by 2+): a Kalshi de-vig bug briefly overstated the market's raw price at 60%+ by wrongly cross-normalizing a nested goal-margin ladder; corrected and re-pulled, the market's raw price is ~47-48%, matching PELE (47.6%) and a Dixon-Coles Poisson check (45.0%) almost exactly — no edge. Over 2.5 (blend 56.2% vs. market ~59.5%) and BTTS Yes (blend 46.2% vs. market ~49.5%) show soft, single-digit leans too small to call price-is-wrong.", "gdAngle": "None — knockout, no goal differential. The lever translates into the total/clean-sheet environment and the to-advance market, both of which are efficiently priced tonight (see The Goal-Differential Lever section).", "singles": [], "longshots": [{"bet": "Correct score 1-0 USA (Reg Time)", "price": "~12¢ ask (Kalshi, fair ~11.4%)", "mechanism": "PELE 13.8% vs. market 11.4% — the tightest expression of “USA controls but Bosnia's grind mechanism keeps it to one goal.”"}, {"bet": "Correct score 2-0 USA (Reg Time)", "price": "~13¢ ask (Kalshi, fair ~12.4%)", "mechanism": "PELE's modal scoreline (12.0%), inside the Poisson top-2 (14.1%); market price is a near-exact match — clean, model-matched longshot, not a mispricing."}], "sgp": null}, {"matchup": "Belgium vs Senegal", "venue": "Lumen Field, Seattle (neutral)", "ko": "4:00 PM ET — LIVE, 0-0 (7')", "archetype": "LIVE — kicked off before this guide published, reference only", "archClass": "live", "lineupNote": "CONFIRMED at kickoff. Belgium (4-2-3-1): Courtois; Castagne, Theate, Mechele, De Cuyper; Tielemans, Vanaken; Doku, De Bruyne, Trossard; De Ketelaere — Lukaku left out of the XI, De Ketelaere playing false-9. Senegal (4-3-3): Diaw; Diatta, Ciss, Niakhaté, Jakobs; Diarra, Idrissa Gueye, Pape Gueye; Ndiaye, Sarr, Mané — No. 1 keeper Édouard Mendy unavailable (knee injury vs. Norway); Mory Diaw starts in his place.", "incentive": "Win-or-go-home, Round of 32. Belgium topped Group G; Senegal advanced as a third-place qualifier.", "ourRead": "This game had already kicked off (4:00 PM ET) by the time today's research was being built, so it was never presented as a pre-match pick — included here as live context only. Pre-match, PELE and the market both read it as close to a coin flip: PELE 34.8% Belgium / 29.8% Draw / 35.3% Senegal (advance split an exact 50/50); Kalshi's de-vigged read leaned Belgium a touch more (49.75% Belgium reg-time win, advance 66.5% Belgium / 33.5% Senegal). Both squads lean veteran (De Bruyne/Courtois/Vanaken for Belgium, Koulibaly/Gueye/a farewell-tournament Mané for Senegal) with Belgium missing a true No. 9 (Lukaku benched) and Senegal set up as an organized low block — pre-match research flagged this as a cagey, error/set-piece-driven script, plausibly live deep into extra time and penalties given the tactical parity on both benches.", "model": "PELE 34.8% / 29.8% / 35.3%; Kalshi de-vigged 49.75% / 28.1% / 22.2%. Not bettable pre-match today — shown for context only.", "gdAngle": "None — knockout tie.", "singles": [], "longshots": [], "sgp": null}, {"matchup": "England vs DR Congo", "venue": "Mercedes-Benz Stadium, Atlanta (neutral)", "ko": "12:00 PM ET — FINAL, England 2-1 DR Congo", "archetype": "FINAL — reference only", "archClass": "live", "lineupNote": "Match complete — no lineup-lock relevance remaining.", "incentive": "Round of 32, win-or-go-home — England advance to the Round of 16.", "ourRead": "FINAL: England 2, DR Congo 1. Brian Cipenga struck early (7') to give Congo DR a shock lead; England needed a Harry Kane brace — a 75th-minute header and an 86th-minute finish — to complete the comeback and advance. Bellingham (19') and Sadiki (28') were both booked. This game had already kicked off before today's guide was built, so it was never presented as a pre-match pick — included here as the completed result only, sourced from the live ESPN scoreboard fetched this run.", "model": "Pre-match PELE had England 78.5% / Draw 16.7% / DR Congo 4.8% to win in regulation — the model favorite held after an early scare.", "gdAngle": "None — knockout tie, now moot.", "singles": [], "longshots": [], "sgp": null}]};
 
-const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
+const el=(t,c,h)=>{const e=document.createElement(t); if(c)e.className=c; if(h!=null)e.innerHTML=h; return e;};
 const app=document.getElementById('app');
-document.getElementById('hero-sub').innerHTML=DATA.meta.heroSub;
-const stamp=document.getElementById('hero-stamp');DATA.meta.chips.forEach(c=>stamp.appendChild(el('span','chip',c)));
-document.getElementById('disclaimer').innerHTML=DATA.meta.disclaimer;
-if(DATA.meta.banner){const b=el('div','banner');b.appendChild(el('span','pulse'));b.appendChild(el('div',null,DATA.meta.banner));app.appendChild(b);}
-function head(num,title){const h=el('div','sec-head');h.appendChild(el('span','num',num));h.appendChild(el('h2',null,title));h.appendChild(el('div','rule'));return h;}
 
-// 01 report card
-let s=el('section');s.appendChild(head('01','Yesterday’s Report Card'));
-let p=el('div','panel');p.appendChild(el('p','lead',DATA.reportCard.intro));
-const rc=el('div','rc');rc.style.marginTop='16px';
-DATA.reportCard.games.forEach(g=>{const c=el('div','rcgame '+g.cls);c.appendChild(el('h4',null,g.title));c.appendChild(el('div','res',g.res));
-  g.rows.forEach(r=>{const row=el('div','rcrow');row.appendChild(el('span','tag '+r.t.toLowerCase(),r.t));row.appendChild(el('span',null,r.x));c.appendChild(row);});rc.appendChild(c);});
-p.appendChild(rc);p.insertAdjacentHTML('beforeend','<p style="margin-top:16px">'+DATA.reportCard.lessons+'</p>');s.appendChild(p);app.appendChild(s);
+// hero
+document.getElementById('hero-eyebrow').textContent = DATA.meta.eyebrow || 'World Cup 2026';
+document.getElementById('hero-sub').textContent = DATA.meta.heroSub;
+const stamp=document.getElementById('hero-stamp');
+DATA.meta.chips.forEach(c=>{const s=el('span','chip',c); stamp.appendChild(s);});
+document.getElementById('disclaimer').innerHTML = DATA.meta.disclaimer;
+if(DATA.meta.liveBanner){const lb=el('div','live-banner'); lb.appendChild(el('span','pulse')); lb.appendChild(el('div',null,DATA.meta.liveBanner)); app.appendChild(lb);}
 
-// 02 slate read
-s=el('section');s.appendChild(head('02','The Slate Read'));
-p=el('div','panel');p.appendChild(el('p','lead',DATA.slateRead.narrative));
-let tb='<table class="mtab"><tr><th>Game</th><th>Our read</th><th>Market · vs PELE</th><th>Takeaway</th></tr>';
-DATA.slateRead.mispricingTable.forEach(r=>{tb+=`<tr><td class="g">${r.game}</td><td class="mono">${r.model}</td><td class="mono">${r.market}</td><td class="edge ${r.cls}">${r.edge}</td></tr>`;});
-tb+='</table>';p.insertAdjacentHTML('beforeend',tb);s.appendChild(p);app.appendChild(s);
+function sectionHead(num,title){
+  const h=el('div','sec-head');
+  h.appendChild(el('span','num',num));
+  h.appendChild(el('h2',null,title));
+  h.appendChild(el('div','rule'));
+  return h;
+}
 
-// 03 card of day
-s=el('section');s.appendChild(head('03','Card of the Day'));
+// 1. The Read
+let s=el('section'); s.appendChild(sectionHead('01','The Slate Read'));
+let p=el('div','panel'); p.appendChild(el('p','lead',DATA.narrative));
+const th=el('div','themes');
+DATA.themes.forEach(t=>th.appendChild(el('div','theme '+(t.cls||''),t.txt)));
+p.appendChild(th); s.appendChild(p); app.appendChild(s);
+
+// 2. Card of the day
+s=el('section'); s.appendChild(sectionHead('02','Card of the Day'));
 const cod=el('div','cod');
-const m=el('div','cod-main');m.appendChild(el('div','tag2','★ Tightest Play'));m.appendChild(el('h3',null,DATA.cardOfDay.title));m.appendChild(el('p',null,DATA.cardOfDay.body));cod.appendChild(m);
-const sd=el('div','cod-side');sd.appendChild(el('div','tag2','⚡ Dog Scorers'));sd.appendChild(el('h3',null,DATA.cardOfDay.longshotTitle));sd.appendChild(el('p',null,DATA.cardOfDay.longshotBody));cod.appendChild(sd);
-s.appendChild(cod);app.appendChild(s);
+const m=el('div','cod-main'); m.appendChild(el('div','tag','★ Tightest Play'));
+m.appendChild(el('h3',null,DATA.cardOfDay.title)); m.appendChild(el('p',null,DATA.cardOfDay.body));
+cod.appendChild(m);
+const sd=el('div','cod-side'); sd.appendChild(el('div','tag','⚡ Best Longshot'));
+sd.appendChild(el('h3',null,DATA.cardOfDay.longshotTitle)); sd.appendChild(el('p',null,DATA.cardOfDay.longshotBody));
+cod.appendChild(sd); s.appendChild(cod); app.appendChild(s);
 
-// 04 singles
-s=el('section');s.appendChild(head('04','Top Singles — Our Number vs the Price'));
-let bd=el('div','board');
-DATA.topSingles.forEach((x,i)=>{const r=el('div','bet');r.appendChild(el('div','rank',i+1));
-  const body=el('div','body');body.appendChild(el('div','game',x.game));body.insertAdjacentHTML('beforeend',`<div class="name">${x.bet}<span class="tt">${x.type}</span></div>`);body.appendChild(el('div','why',x.rationale));r.appendChild(body);
-  const meta=el('div','meta');meta.appendChild(el('div','price',x.price));meta.appendChild(el('div','probs','mkt '+x.marketPct+' → our '+x.ourPct));meta.appendChild(el('div','badge '+x.confidence,x.confidence));r.appendChild(meta);bd.appendChild(r);});
-s.appendChild(bd);app.appendChild(s);
+// 3. Best singles
+s=el('section'); s.appendChild(sectionHead('03','Top Singles — Our Number vs the Price'));
+const b=el('div','board');
+DATA.bestSingles.forEach((x,i)=>{
+  const r=el('div','bet');
+  r.appendChild(el('div','rank',(i+1)));
+  const body=el('div','body');
+  body.appendChild(el('div','game',x.game));
+  body.appendChild(el('div','name',x.bet));
+  body.appendChild(el('div','why',x.rationale));
+  r.appendChild(body);
+  const meta=el('div','meta');
+  meta.appendChild(el('div','price',x.price));
+  meta.appendChild(el('div','probs','mkt '+x.marketProb+' → our '+x.modelProb));
+  meta.appendChild(el('div','badge '+x.confidence,x.confidence));
+  r.appendChild(meta); b.appendChild(r);
+});
+s.appendChild(b); app.appendChild(s);
 
-// 05 longshots
-s=el('section');s.appendChild(head('05','Longshots With Legs'));
-let lb=el('div','board');
-DATA.longshots.forEach(x=>{const r=el('div','bet');r.appendChild(el('div','rank','✦'));
-  const body=el('div','body');body.appendChild(el('div','game',x.game));body.appendChild(el('div','name',x.bet));body.appendChild(el('div','why',x.mechanism));r.appendChild(body);
-  const meta=el('div','meta');meta.appendChild(el('div','price',x.price));meta.appendChild(el('div','badge longshot','longshot'));r.appendChild(meta);lb.appendChild(r);});
-s.appendChild(lb);app.appendChild(s);
+// 4. Longshots
+s=el('section'); s.appendChild(sectionHead('04','Longshots With Legs'));
+const lb=el('div','board');
+DATA.bestLongshots.forEach((x,i)=>{
+  const r=el('div','bet');
+  r.appendChild(el('div','rank','✦'));
+  const body=el('div','body');
+  body.appendChild(el('div','game',x.game));
+  body.appendChild(el('div','name',x.bet));
+  body.appendChild(el('div','why',x.mechanism));
+  r.appendChild(body);
+  const meta=el('div','meta');
+  meta.appendChild(el('div','price',x.price));
+  meta.appendChild(el('div','badge longshot','longshot'));
+  r.appendChild(meta); lb.appendChild(r);
+});
+s.appendChild(lb); app.appendChild(s);
 
-// 06 SGPs
-s=el('section');s.appendChild(head('06','Same-Game Parlays — incl. cross-team shots'));
-let sg=el('div','board');
-DATA.sgps.forEach(x=>{const c=el('div','sgp'+(x.kind!=='standard'?' xt':''));c.appendChild(el('div','kind',x.kind));c.appendChild(el('h4',null,x.game));c.appendChild(el('p',null,x.thesis));
-  const ul=el('ul','legs');x.legs.forEach(l=>ul.appendChild(el('li',null,l)));c.appendChild(ul);c.appendChild(el('div','corr','<b>Why it works:</b> '+x.correlation));sg.appendChild(c);});
-s.appendChild(sg);app.appendChild(s);
+// 5. SGPs
+s=el('section'); s.appendChild(sectionHead('05','Correlated Same-Game Parlays'));
+const sg=el('div','board');
+DATA.bestSGPs.forEach(x=>{
+  const c=el('div','sgp');
+  c.appendChild(el('h4',null,x.game));
+  c.appendChild(el('p',null,x.thesis));
+  const ul=el('ul','legs'); x.legs.forEach(l=>ul.appendChild(el('li',null,l))); c.appendChild(ul);
+  c.appendChild(el('div','corr','<b>Why it correlates:</b> '+x.correlation+(x.stakeNote?' · '+x.stakeNote:'')));
+  sg.appendChild(c);
+});
+s.appendChild(sg); app.appendChild(s);
 
-// 07 taxonomy
-s=el('section');s.appendChild(head('07','Knockout Taxonomy — Reg vs Extra Time vs Advance'));
-p=el('div','panel');p.appendChild(el('p',null,DATA.taxonomy.intro));
-let tx='<table class="taxtab"><tr><th>Market</th><th>Settles on</th><th>How to attack it</th></tr>';
-DATA.taxonomy.rows.forEach(r=>{const cl=r.clock==='adv'?'adv':'reg';const lbl=r.clock==='adv'?'ADVANCE (ET+pens)':'REGULATION';tx+=`<tr><td class="m ${cl}">${r.market}<br><span style="font-size:9px;letter-spacing:.1em">${lbl}</span></td><td>${r.settles}</td><td>${r.attack}</td></tr>`;});
-tx+='</table>';p.insertAdjacentHTML('beforeend',tx);s.appendChild(p);app.appendChild(s);
+// 6. Goal differential special
+s=el('section'); s.appendChild(sectionHead('06','The Goal-Differential Lever'));
+p=el('div','panel'); p.innerHTML='<p class="lead">'+DATA.gdSpecial+'</p>'; s.appendChild(p); app.appendChild(s);
 
-// 08 shots
-s=el('section');s.appendChild(head('08','The Shots / SOG Edge'));
-p=el('div','panel');p.appendChild(el('p',null,DATA.shots.intro));
-let smb=el('div','mini-board');smb.style.marginTop='16px';
-DATA.shots.standalone.forEach(x=>{const mi=el('div','mini');const n=el('div','n',x.bet);n.appendChild(el('span','sub',x.game+' · '+x.read));mi.appendChild(n);
-  const rr=el('div','r');rr.appendChild(el('div','p',x.price));rr.appendChild(el('div','badge '+(x.conf==='solid'?'solid':'lean'),x.conf));mi.appendChild(rr);smb.appendChild(mi);});
-p.appendChild(smb);s.appendChild(p);app.appendChild(s);
+// 7. Start/sit watch
+s=el('section'); s.appendChild(sectionHead('07','Start / Sit Watch — Check Before You Lock'));
+p=el('div','panel'); p.innerHTML='<p>'+DATA.startSit+'</p>'; s.appendChild(p); app.appendChild(s);
 
-// 09 start/sit
-s=el('section');s.appendChild(head('09','Start / Sit Watch'));
-p=el('div','panel');p.innerHTML='<p>'+DATA.startSit+'</p>';s.appendChild(p);app.appendChild(s);
+// 8. Game-by-game
+s=el('section'); s.appendChild(sectionHead('08','Game-by-Game Breakdown'));
+const gw=el('div','games');
+DATA.games.forEach((g,gi)=>{
+  const c=el('div','game'+(g.archClass==='live'?' islive':'')); c.style.animationDelay=(gi*0.08)+'s';
+  const top=el('div','game-top');
+  const left=el('div'); left.appendChild(el('div','matchup',g.matchup));
+  left.appendChild(el('div','vinfo',g.venue+'  ·  '+g.ko));
+  top.appendChild(left);
+  top.appendChild(el('div','atype '+g.archClass,g.archetype));
+  c.appendChild(top);
+  const bd=el('div','game-body');
 
-// 10 game-by-game
-s=el('section');s.appendChild(head('10','Game-by-Game Breakdown'));
-let gw=el('div','games');
-DATA.games.forEach((g,gi)=>{const c=el('div','game');c.style.animationDelay=(gi*0.08)+'s';
-  const top=el('div','game-top');const left=el('div');left.appendChild(el('div','matchup',g.matchup));left.appendChild(el('div','vinfo',g.venue+'  ·  '+g.ko));top.appendChild(left);
-  top.appendChild(el('div','atype '+g.archClass,g.archetype));c.appendChild(top);
-  const b=el('div','game-body');
-  const addRow=(cls,k,v)=>{const r=el('div','row '+cls);r.appendChild(el('div','k',k));r.appendChild(el('div','v',v));b.appendChild(r);};
-  addRow('lineup','Lineups & News',g.lineupNote);addRow('inc','What They’re Playing For',g.incentive);addRow('read','Our Read — The Script',g.ourRead);
-  const mr=el('div','row read');mr.appendChild(el('div','k','Our Read vs Market vs PELE'));mr.appendChild(el('div','model-line',g.model));b.appendChild(mr);
-  if(g.singles){const r=el('div','row');r.appendChild(el('div','k','Singles With Edge'));const mb=el('div','mini-board');
-    g.singles.forEach(x=>{const mi=el('div','mini');const n=el('div','n',x.bet);n.appendChild(el('span','sub',x.rationale));mi.appendChild(n);
-      const rr=el('div','r');rr.appendChild(el('div','p',x.price));rr.appendChild(el('div','pr',x.marketProb+' → '+x.modelProb));rr.appendChild(el('div','badge '+x.confidence,x.confidence));mi.appendChild(rr);mb.appendChild(mi);});
-    r.appendChild(mb);b.appendChild(r);}
-  if(g.shotsPlays)addRow('','Shots / SOG',g.shotsPlays);
-  if(g.longshots){const r=el('div','row');r.appendChild(el('div','k','Longshots'));const mb=el('div','mini-board');
-    g.longshots.forEach(x=>{const mi=el('div','mini');const n=el('div','n',x.bet);n.appendChild(el('span','sub',x.mechanism));mi.appendChild(n);const rr=el('div','r');rr.appendChild(el('div','p',x.price));mi.appendChild(rr);mb.appendChild(mi);});
-    r.appendChild(mb);b.appendChild(r);}
-  if(g.sgp){const r=el('div','row');r.appendChild(el('div','k','Featured SGP'));const sp=el('div','sgp');sp.appendChild(el('p',null,g.sgp.thesis));
-    const ul=el('ul','legs');g.sgp.legs.forEach(l=>ul.appendChild(el('li',null,l)));sp.appendChild(ul);sp.appendChild(el('div','corr','<b>Correlation:</b> '+g.sgp.correlation));r.appendChild(sp);b.appendChild(r);}
-  addRow('inc','Discipline Note',g.incentiveAngle);
-  c.appendChild(b);gw.appendChild(c);});
-s.appendChild(gw);app.appendChild(s);
+  const addRow=(cls,k,v)=>{const r=el('div','row '+cls); r.appendChild(el('div','k',k)); r.appendChild(el('div','v',v)); bd.appendChild(r); return r;};
+  addRow('lineup','Lineups & News',g.lineupNote);
+  addRow('','What They’re Playing For',g.incentive);
+  addRow('read','Our Read — The Script',g.ourRead);
+  const mr=el('div','row read'); mr.appendChild(el('div','k','Model vs Market')); mr.appendChild(el('div','model-line',g.model)); bd.appendChild(mr);
+
+  if(g.singles && g.singles.length){
+    const r=el('div','row'); r.appendChild(el('div','k','Singles With Edge'));
+    const mb=el('div','mini-board');
+    g.singles.forEach(x=>{
+      const mi=el('div','mini');
+      const n=el('div','n',x.bet); n.appendChild(el('span','sub',x.rationale)); mi.appendChild(n);
+      const rr=el('div','r'); rr.appendChild(el('div','p',x.price));
+      rr.appendChild(el('div','pr',x.marketProb+' → '+x.modelProb));
+      rr.appendChild(el('div','badge '+x.confidence,x.confidence)); mi.appendChild(rr);
+      mb.appendChild(mi);
+    });
+    r.appendChild(mb); bd.appendChild(r);
+  }
+  if(g.longshots && g.longshots.length){
+    const r=el('div','row'); r.appendChild(el('div','k','Longshots'));
+    const mb=el('div','mini-board');
+    g.longshots.forEach(x=>{
+      const mi=el('div','mini ls-row');
+      const n=el('div','n',x.bet); n.appendChild(el('span','sub',x.mechanism)); mi.appendChild(n);
+      const rr=el('div','r'); rr.appendChild(el('div','p',x.price)); mi.appendChild(rr);
+      mb.appendChild(mi);
+    });
+    r.appendChild(mb); bd.appendChild(r);
+  }
+  if(g.sgp){
+    const r=el('div','row'); r.appendChild(el('div','k','Same-Game Parlay'));
+    const sgp=el('div','sgp');
+    sgp.appendChild(el('p',null,g.sgp.thesis));
+    const ul=el('ul','legs'); g.sgp.legs.forEach(l=>ul.appendChild(el('li',null,l))); sgp.appendChild(ul);
+    sgp.appendChild(el('div','corr','<b>Correlation:</b> '+g.sgp.correlation));
+    r.appendChild(sgp); bd.appendChild(r);
+  }
+  addRow('gd','Goal-Differential Angle',g.gdAngle);
+
+  c.appendChild(bd); gw.appendChild(c);
+});
+s.appendChild(gw); app.appendChild(s);
 </script>
 </body>
 </html>
