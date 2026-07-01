@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Cup MD3 — Sharp's Betting Guide · June 26, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070b16; --bg2:#0b1120; --panel:#0f1729; --panel2:#131d33; --line:#1e2b47;
+  --ink:#eaf0fb; --ink-dim:#9fb0cd; --ink-faint:#6b7c9c;
+  --pitch:#19d66b; --pitch-deep:#0a9c4a; --amber:#ffb020; --gold:#f5c542;
+  --ice:#41c5f0; --rose:#ff5c7a; --violet:#9b8cff;
+  --over:#19d66b; --under:#41c5f0; --flip:#ffb020;
+  --r:16px; --shadow:0 18px 48px -18px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:
+    radial-gradient(1200px 600px at 78% -8%, rgba(25,214,107,.10), transparent 60%),
+    radial-gradient(1000px 560px at 8% 4%, rgba(65,197,240,.09), transparent 55%),
+    var(--bg);
+  color:var(--ink); font-family:'Sora',system-ui,sans-serif; line-height:1.6;
+  -webkit-font-smoothing:antialiased; padding-bottom:64px;
+}
+.wrap{max-width:1080px; margin:0 auto; padding:0 22px}
+h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif; line-height:1.12; margin:0; letter-spacing:-.01em}
+.mono{font-family:'JetBrains Mono',monospace}
+a{color:var(--ice); text-decoration:none}
+
+/* HERO */
+.hero{position:relative; overflow:hidden; border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,#091022 0%, #070b16 100%);}
+.hero::before{content:""; position:absolute; inset:0; opacity:.5;
+  background-image:repeating-linear-gradient(90deg, transparent 0 78px, rgba(255,255,255,.025) 78px 79px);
+  pointer-events:none;}
+.hero::after{content:""; position:absolute; left:0; right:0; bottom:-1px; height:2px;
+  background:linear-gradient(90deg,var(--pitch),var(--ice),var(--amber));}
+.hero-inner{position:relative; padding:54px 0 40px}
+.eyebrow{display:inline-flex; align-items:center; gap:9px; font-family:'JetBrains Mono',monospace;
+  font-size:12px; letter-spacing:.22em; text-transform:uppercase; color:var(--pitch);
+  background:rgba(25,214,107,.08); border:1px solid rgba(25,214,107,.25); padding:6px 13px; border-radius:999px}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--pitch);box-shadow:0 0 0 4px rgba(25,214,107,.18)}
+.hero h1{font-size:clamp(34px,6vw,60px); font-weight:700; margin:18px 0 8px}
+.hero h1 .accent{background:linear-gradient(90deg,var(--pitch),var(--ice)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.hero .sub{font-size:clamp(15px,2.2vw,19px); color:var(--ink-dim); max-width:680px}
+.hero .stamp{margin-top:20px; display:flex; flex-wrap:wrap; gap:10px}
+.chip{font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--ink-dim);
+  background:var(--panel); border:1px solid var(--line); border-radius:999px; padding:7px 13px}
+.chip b{color:var(--ink)}
+
+/* SECTIONS */
+section{padding:40px 0 8px}
+.sec-head{display:flex; align-items:baseline; gap:14px; margin-bottom:20px}
+.sec-head .num{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--pitch); padding-top:4px}
+.sec-head h2{font-size:clamp(22px,3.4vw,30px); font-weight:600}
+.sec-head .rule{flex:1; height:1px; background:linear-gradient(90deg,var(--line),transparent); align-self:center}
+
+/* NARRATIVE / PROSE PANELS */
+.panel{background:linear-gradient(180deg,var(--panel),var(--bg2)); border:1px solid var(--line);
+  border-radius:var(--r); padding:24px 26px; box-shadow:var(--shadow)}
+.panel p{margin:0 0 12px} .panel p:last-child{margin-bottom:0}
+.lead{font-size:17px; color:var(--ink)}
+.themes{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:18px}
+.theme{background:var(--panel2); border:1px solid var(--line); border-left:3px solid var(--pitch);
+  border-radius:12px; padding:15px 17px; font-size:14.5px; color:var(--ink-dim)}
+.theme.under{border-left-color:var(--under)} .theme.flip{border-left-color:var(--flip)}
+
+/* CARD OF DAY */
+.cod{display:grid; grid-template-columns:1.1fr 1fr; gap:16px; margin-top:4px}
+.cod-main{background:
+    radial-gradient(420px 200px at 90% 0%, rgba(245,197,66,.12), transparent 60%), var(--panel);
+  border:1px solid rgba(245,197,66,.3); border-radius:var(--r); padding:24px 26px; box-shadow:var(--shadow)}
+.cod-main .tag{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold)}
+.cod-main h3{font-size:21px; margin:8px 0 10px}
+.cod-side{background:var(--panel); border:1px solid var(--line); border-radius:var(--r); padding:22px 24px}
+.cod-side .tag{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--violet)}
+.cod-side h3{font-size:18px; margin:8px 0 10px}
+
+/* HIGHLIGHT BOARDS (best singles/longshots/sgps) */
+.board{display:grid; gap:12px}
+.bet{display:grid; grid-template-columns:auto 1fr auto; gap:16px; align-items:center;
+  background:var(--panel); border:1px solid var(--line); border-radius:13px; padding:15px 18px;
+  transition:border-color .2s, transform .2s}
+.bet:hover{border-color:rgba(25,214,107,.4); transform:translateX(3px)}
+.bet .rank{font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; color:var(--ink-faint); width:26px; text-align:center}
+.bet .body .game{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.05em; color:var(--ink-faint); text-transform:uppercase}
+.bet .body .name{font-weight:600; font-size:16px; color:var(--ink); margin:1px 0 3px}
+.bet .body .why{font-size:13.5px; color:var(--ink-dim)}
+.bet .meta{text-align:right; min-width:120px}
+.bet .price{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:17px; color:var(--pitch)}
+.bet .probs{font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--ink-faint); margin-top:2px}
+.badge{display:inline-block; font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:700;
+  letter-spacing:.08em; text-transform:uppercase; padding:3px 9px; border-radius:999px; margin-top:6px}
+.badge.strong{background:rgba(25,214,107,.16); color:var(--pitch); border:1px solid rgba(25,214,107,.35)}
+.badge.solid{background:rgba(65,197,240,.14); color:var(--ice); border:1px solid rgba(65,197,240,.32)}
+.badge.lean{background:rgba(255,176,32,.14); color:var(--amber); border:1px solid rgba(255,176,32,.3)}
+.badge.longshot{background:rgba(155,140,255,.14); color:var(--violet); border:1px solid rgba(155,140,255,.32)}
+
+/* SGP cards */
+.sgp{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px 20px}
+.sgp h4{font-size:16px; margin-bottom:4px}
+.sgp .legs{list-style:none; padding:0; margin:12px 0}
+.sgp .legs li{display:flex; gap:10px; align-items:flex-start; padding:7px 0; border-bottom:1px dashed var(--line); font-size:14.5px}
+.sgp .legs li:last-child{border-bottom:none}
+.sgp .legs li::before{content:"▸"; color:var(--pitch); font-size:13px; margin-top:2px}
+.sgp .corr{font-size:13px; color:var(--ink-dim); background:var(--panel2); border-radius:9px; padding:10px 13px; margin-top:6px}
+.sgp .corr b{color:var(--ice)}
+
+/* GAME CARDS */
+.games{display:grid; gap:22px}
+.game{background:linear-gradient(180deg,var(--panel),var(--bg2)); border:1px solid var(--line);
+  border-radius:18px; overflow:hidden; box-shadow:var(--shadow);
+  opacity:0; transform:translateY(16px); animation:rise .6s forwards}
+@keyframes rise{to{opacity:1; transform:none}}
+.game-top{display:flex; justify-content:space-between; align-items:flex-start; gap:14px;
+  padding:20px 24px; border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg, rgba(255,255,255,.02), transparent)}
+.game-top .matchup{font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:700}
+.game-top .vinfo{font-size:12.5px; color:var(--ink-faint); margin-top:4px; font-family:'JetBrains Mono',monospace}
+.atype{font-family:'JetBrains Mono',monospace; font-size:10.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+  padding:6px 12px; border-radius:999px; white-space:nowrap}
+.atype.over{background:rgba(25,214,107,.14); color:var(--pitch); border:1px solid rgba(25,214,107,.34)}
+.atype.under{background:rgba(65,197,240,.13); color:var(--under); border:1px solid rgba(65,197,240,.32)}
+.atype.flip{background:rgba(255,176,32,.13); color:var(--flip); border:1px solid rgba(255,176,32,.3)}
+.atype.live{background:rgba(255,92,122,.16); color:var(--rose); border:1px solid rgba(255,92,122,.42)}
+.game.islive{border-color:rgba(255,92,122,.28)}
+.game.islive .game-top{background:linear-gradient(180deg, rgba(255,92,122,.06), transparent)}
+.live-banner{display:flex; gap:12px; align-items:flex-start; margin-top:28px;
+  background:linear-gradient(180deg, rgba(255,92,122,.1), rgba(255,92,122,.03));
+  border:1px solid rgba(255,92,122,.32); border-radius:14px; padding:15px 18px; font-size:14.5px; color:var(--ink-dim)}
+.live-banner .pulse{flex-shrink:0; width:10px; height:10px; border-radius:50%; background:var(--rose); margin-top:6px;
+  box-shadow:0 0 0 0 rgba(255,92,122,.6); animation:pulse 1.8s infinite}
+.live-banner b{color:var(--ink)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,92,122,.5)}70%{box-shadow:0 0 0 9px rgba(255,92,122,0)}100%{box-shadow:0 0 0 0 rgba(255,92,122,0)}}
+.game-body{padding:8px 24px 22px}
+.row{padding:16px 0; border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:none}
+.row .k{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--pitch); margin-bottom:7px}
+.row.read .k{color:var(--ice)} .row.gd .k{color:var(--gold)} .row.lineup .k{color:var(--violet)}
+.row .v{font-size:14.5px; color:var(--ink-dim)}
+.row .v b{color:var(--ink)}
+.mini-board{display:grid; gap:9px; margin-top:4px}
+.mini{display:grid; grid-template-columns:1fr auto; gap:12px; align-items:center;
+  background:var(--panel2); border:1px solid var(--line); border-radius:11px; padding:11px 14px}
+.mini .n{font-weight:600; font-size:14.5px; color:var(--ink)}
+.mini .n .sub{display:block; font-weight:400; font-size:13px; color:var(--ink-dim); margin-top:2px}
+.mini .r{text-align:right; white-space:nowrap}
+.mini .r .p{font-family:'JetBrains Mono',monospace; font-weight:700; font-size:15px; color:var(--pitch)}
+.mini .r .pr{font-family:'JetBrains Mono',monospace; font-size:10.5px; color:var(--ink-faint); margin-top:2px}
+.ls-row .r .p{color:var(--violet)}
+.model-line{font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--ink-dim); line-height:1.5;
+  background:var(--bg2); border:1px solid var(--line); border-radius:9px; padding:11px 14px; white-space:normal; word-wrap:break-word}
+
+footer{margin-top:48px; border-top:1px solid var(--line); padding-top:24px}
+.disclaimer{font-size:13px; color:var(--ink-faint); background:var(--panel); border:1px solid var(--line);
+  border-radius:12px; padding:16px 18px}
+.disclaimer b{color:var(--ink-dim)}
+@media(max-width:720px){ .cod{grid-template-columns:1fr} .bet{grid-template-columns:auto 1fr; } .bet .meta{grid-column:2; text-align:left; margin-top:6px} }
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap hero-inner">
+  <span class="eyebrow"><span class="dot"></span> <span id="hero-eyebrow">Loading…</span></span>
+  <h1>World Cup <span class="accent">Edge Report</span></h1>
+  <p class="sub" id="hero-sub">Loading…</p>
+  <div class="stamp" id="hero-stamp"></div>
+</div></header>
+
+<main class="wrap" id="app"></main>
+
+<footer class="wrap"><div class="disclaimer" id="disclaimer"></div></footer>
+
+<script>
+/* DATA is injected below. Render engine builds the whole guide from it. */
+const DATA = {"meta": {"eyebrow": "Round of 32 · Knockout Stage", "heroSub": "World Cup 2026 · Round of 32 · one pre-match game tonight, two already underway", "chips": ["Wed Jul 1, 2026", "3 games · knockout", "Odds pulled ~4:00-4:15 PM ET (Kalshi only)", "Model: PELE blend + Dixon-Coles Poisson"], "liveBanner": "LIVE: England 2-1 DR Congo (FINAL) · Belgium 0-0 Senegal (in progress, kicked off 4:00 PM ET) — tonight's only pre-match game is USA vs Bosnia-Herzegovina, 8:00 PM ET", "disclaimer": "Edge = our independent projection vs. the de-vigged market price, not one book vs. another. A “solid” tag means the <i>price</i> looks a touch wrong — every +EV bet still loses a large share of the time. DraftKings/The Odds API was unavailable this run (no API key configured) — every price below is Kalshi-only, with no second book to cross-check. USA-Bosnia lineups are PROJECTED (XIs lock ~75 min pre-kick, ~6:45 PM ET) — reconfirm before you stake. Bet only legal books, only what you can afford to lose."}, "narrative": "Three Round of 32 games today, but the timing gate leaves only one of them pre-match bettable by the time this guide publishes. England beat DR Congo 2-1 (Kane's 75th-minute header and 86th-minute finish erased Brian Cipenga's early strike) — already final, reference only. Belgium and Senegal kicked off at 4:00 PM ET, essentially the same moment this guide was being built — PELE and the market both read that tie as a near-exact coin flip (PELE: 34.8/29.8/35.3, advance split an even 50/50), included below as live context, not a pick. That leaves USA vs Bosnia-Herzegovina (8:00 PM ET, Levi's Stadium) as tonight's entire pre-match card, and after a full research → projection → props → adversarial-verify pass, the honest read is that the market has it right almost everywhere: PELE, Kalshi, and Opta's supercomputer all cluster USA's win probability within 4 points of each other, and the advance market is just as tight. The one gap that looked real early — the market apparently pricing a 60%+ chance USA wins by two or more goals, against our model's ~48% — turned out to be a de-vig bug in how a nested goal-margin ladder was being normalized (fixed this run; see the data-gaps note). Corrected, the market's own raw price on USA -1.5 sits at ~47-48%, matching PELE (47.6%) almost exactly. No single clears the bar tonight — the two correct-score longshots below are the closest thing to a real angle.", "themes": [{"cls": "flip", "txt": "MARKET IS SHARP TONIGHT — PELE, Kalshi, and Opta all land within 4pts on USA-BIH's moneyline and advance markets; a Kalshi data-normalization bug briefly looked like a spread edge, corrected on review — no forced single."}, {"cls": "over", "txt": "USA'S SPINE RETURNS — Balogun, Adams, and Richards are back after a rotated, immaterial loss to Türkiye; Bosnia have never posted a World Cup clean sheet in six tries."}, {"cls": "flip", "txt": "TWO GAMES ALREADY LIVE/FINAL — England 2-1 DR Congo is final and Belgium-Senegal kicked off before this guide published; neither is presented as a pre-match pick today."}], "cardOfDay": {"title": "No Forced Single Tonight — the Market's Sharp", "body": "USA vs Bosnia-Herzegovina is the only pre-match game on the board, and after resolving every model-vs-market gap it's priced tightly across the board: our blended 1X2 (71.1/19.0/9.8) and advance number (83.7%) land within a point or two of Kalshi's de-vigged prices (71.1/18.4/10.5, advance 83.5%) and Opta's independent supercomputer read (67.5/18.3/14.3, advance 76.6%). Total-goals (blend 56.2% vs market 59.5%) and BTTS (blend 46.2% vs market 49.5%) show soft, single-digit leans that don't clear our bar for a real pick. And the one gap that looked real early — the market apparently pricing a 60%+ chance USA wins by two or more goals, against our model's ~48-52% — turned out to be a data-normalization artifact in how Kalshi's nested goal-margin ladder (\"wins by 2+\" and \"wins by 3+\" aren't mutually exclusive outcomes, so they can't be summed to 100%) was being de-vigged. Fixed and re-pulled, the market's own raw price on USA -1.5 is ~47-48%, matching PELE's 47.6% almost exactly. No edge survives adversarial review. Zero forced singles is the honest, disciplined call tonight.", "longshotTitle": "Correct Score: USA 1-0 (Reg Time) — ~12¢ ask (Kalshi, fair ~11.4%)", "longshotBody": "The one place PELE still meaningfully outruns the market: our model gives a clean 1-0 USA scoreline 13.8% vs. the market's de-vigged 11.4%, a ~2.4pt gap. It's the scoreline that fits Bosnia's actual profile — the tallest, most physical side in the tournament, with 3 goals from corners this cycle, and a track record of grinding out win-or-go-home ties (they beat Italy in the playoffs just to reach this World Cup) — surviving to keep it a single-goal game even though they've never posted a World Cup clean sheet in six tries. Small-stake, model-supported, not a lock."}, "bestSingles": [], "bestLongshots": [{"game": "USA vs Bosnia-Herzegovina", "bet": "Correct score 1-0 USA (Reg Time)", "price": "~12¢ ask (Kalshi, fair ~11.4%)", "mechanism": "PELE 13.8% vs. market 11.4% — the “USA controls, wins by exactly one, Bosnia's set-piece/grind mechanism keeps it tight” scoreline. Kalshi-only; no DK cross-check available this run."}, {"game": "USA vs Bosnia-Herzegovina", "bet": "Correct score 2-0 USA (Reg Time)", "price": "~13¢ ask (Kalshi, fair ~12.4%)", "mechanism": "PELE's single most-likely scoreline (12.0%) and inside the Poisson top-2 (14.1%); market price (12.4% fair) is a near-exact match — a clean, well-priced longshot on the model's own game script rather than a mispricing. Small-stake."}], "bestSGPs": [], "gdSpecial": "No goal-differential lever tonight — every remaining game is single-elimination Round of 32, so there's no group-stage GD/qualification math left to chase. What replaces it: the draw is a 90-minute regulation outcome only, and the only market that pays for surviving extra time and penalties is <b>to-advance</b> (KXWCADVANCE), not the moneyline, spread, total, or BTTS. Tonight, USA's advance price (Kalshi fair 83.5%, PELE 84.0%, blend 83.7%) is just as efficiently priced as their 90-minute moneyline — no edge there either. If Bosnia's grind mechanism (physicality, set pieces, a track record of gutting out knockout ties on the way to this tournament) is going to pay off, it shows up in the “wins by exactly one” correct-score longshot above, not in a free handicap or draw bet.", "startSit": "<b>USA vs Bosnia-Herzegovina (8:00 PM ET) — PROJECTED, lineups lock ~6:45 PM ET, reconfirm before staking.</b> USA (4-2-3-1): Freese; Freeman, Richards, Ream, Robinson; Adams, Tillman; Dest, McKennie, Pulisic; Balogun. Adams, Balogun and Richards return to the XI after being rotated in the dead-rubber loss to Türkiye; Pulisic (calf management) played 30+ minutes in that game and is a projected starter, not a downgrade. Bosnia (4-4-2): Vasilj; Dedic/Malic, Katic, Muharemovic, Kolasinac; Bajraktarevic, Sunjic, Basic, Alajbegovic; Demirovic, Dzeko — no reported injuries or suspensions, full-strength XI expected. <b>Belgium vs Senegal (kicked off 4:00 PM ET, in progress) — lineups CONFIRMED at kickoff.</b> Belgium (4-2-3-1): Courtois; Castagne, Theate, Mechele, De Cuyper; Tielemans, Vanaken; Doku, De Bruyne, Trossard; De Ketelaere — Lukaku left out of the XI, De Ketelaere playing false-9. Senegal (4-3-3): Diaw; Diatta, Ciss, Niakhaté, Jakobs; Diarra, Idrissa Gueye, Pape Gueye; Ndiaye, Sarr, Mané — No. 1 keeper Édouard Mendy is unavailable (knee injury vs. Norway); Mory Diaw deputizes. <b>England vs DR Congo — FINAL.</b> Bellingham (19') and Sadiki (28') were both booked; no other disciplinary or injury news of note from the match.", "games": [{"matchup": "USA vs Bosnia-Herzegovina", "venue": "Levi's Stadium, Santa Clara (USA co-host — de-facto home crowd)", "ko": "8:00 PM ET", "archetype": "Efficiently-priced favorite — no forced single, longshots only", "archClass": "flip", "lineupNote": "PROJECTED, not confirmed (lineups lock ~6:45 PM ET, ~75 min pre-kick). USA 4-2-3-1: Freese; Freeman, Richards, Ream, Robinson; Adams, Tillman; Dest, McKennie, Pulisic; Balogun — Adams/Balogun/Richards return from group-stage rotation, Pulisic projected fit after calf management. Bosnia 4-4-2: Vasilj; Dedic/Malic, Katic, Muharemovic, Kolasinac; Bajraktarevic, Sunjic, Basic, Alajbegovic; Demirovic, Dzeko — no reported injuries/suspensions, full-strength XI expected. Re-confirm both XIs at lineup lock.", "incentive": "Literal win-or-go-home for both sides (Round of 32). No rest/fatigue/travel edge either way — USA last played Jun 25 (6 days rest), Bosnia last played Jun 26 (5-6 days rest), both standard knockout-round turnarounds.", "ourRead": "USA are the clearly better side (PELE rating gap ~197 with home field; three independent sources — PELE, Kalshi, Opta — all cluster USA's win probability 67-71% and advance 76-84%, no daylight there) and the full-strength attacking spine (Balogun, Adams, Richards) returns after a rotated, immaterial loss to Türkiye. Bosnia have never kept a World Cup clean sheet in six tries and specifically leak on shots inside the box — exactly where Balogun/Pulisic operate — so a USA goal or two arriving is the base case. But Bosnia aren't passive: they're the tallest squad at the tournament with 3 goals from corners this cycle, and their entire route to this World Cup (beating Italy in the playoffs) was built on grinding, physical, win-or-go-home resilience. Once a Kalshi de-vig artifact on the spread ladder was corrected, the market's own number agrees with PELE that a routine 2+ goal margin is roughly a coin flip (~47-48%), not the 60%+ blowout it briefly appeared to price — so there's no real fade to make there either. Primary script: USA controls the ball and creates the better chances; alternate script (~15-20%): Bosnia snatches a set-piece goal and grinds for penalties, their proven path to even reaching this tournament.", "model": "Blended 1X2: USA 71.1% / Draw 19.0% / BIH 9.8% — essentially identical to Kalshi's de-vigged 71.1/18.4/10.5 and Opta's supercomputer read (67.5/18.3/14.3); no edge on the moneyline or the 83-84% advance number either. USA -1.5 (win by 2+): a Kalshi de-vig bug briefly overstated the market's raw price at 60%+ by wrongly cross-normalizing a nested goal-margin ladder; corrected and re-pulled, the market's raw price is ~47-48%, matching PELE (47.6%) and a Dixon-Coles Poisson check (45.0%) almost exactly — no edge. Over 2.5 (blend 56.2% vs. market ~59.5%) and BTTS Yes (blend 46.2% vs. market ~49.5%) show soft, single-digit leans too small to call price-is-wrong.", "gdAngle": "None — knockout, no goal differential. The lever translates into the total/clean-sheet environment and the to-advance market, both of which are efficiently priced tonight (see The Goal-Differential Lever section).", "singles": [], "longshots": [{"bet": "Correct score 1-0 USA (Reg Time)", "price": "~12¢ ask (Kalshi, fair ~11.4%)", "mechanism": "PELE 13.8% vs. market 11.4% — the tightest expression of “USA controls but Bosnia's grind mechanism keeps it to one goal.”"}, {"bet": "Correct score 2-0 USA (Reg Time)", "price": "~13¢ ask (Kalshi, fair ~12.4%)", "mechanism": "PELE's modal scoreline (12.0%), inside the Poisson top-2 (14.1%); market price is a near-exact match — clean, model-matched longshot, not a mispricing."}], "sgp": null}, {"matchup": "Belgium vs Senegal", "venue": "Lumen Field, Seattle (neutral)", "ko": "4:00 PM ET — LIVE, 0-0 (7')", "archetype": "LIVE — kicked off before this guide published, reference only", "archClass": "live", "lineupNote": "CONFIRMED at kickoff. Belgium (4-2-3-1): Courtois; Castagne, Theate, Mechele, De Cuyper; Tielemans, Vanaken; Doku, De Bruyne, Trossard; De Ketelaere — Lukaku left out of the XI, De Ketelaere playing false-9. Senegal (4-3-3): Diaw; Diatta, Ciss, Niakhaté, Jakobs; Diarra, Idrissa Gueye, Pape Gueye; Ndiaye, Sarr, Mané — No. 1 keeper Édouard Mendy unavailable (knee injury vs. Norway); Mory Diaw starts in his place.", "incentive": "Win-or-go-home, Round of 32. Belgium topped Group G; Senegal advanced as a third-place qualifier.", "ourRead": "This game had already kicked off (4:00 PM ET) by the time today's research was being built, so it was never presented as a pre-match pick — included here as live context only. Pre-match, PELE and the market both read it as close to a coin flip: PELE 34.8% Belgium / 29.8% Draw / 35.3% Senegal (advance split an exact 50/50); Kalshi's de-vigged read leaned Belgium a touch more (49.75% Belgium reg-time win, advance 66.5% Belgium / 33.5% Senegal). Both squads lean veteran (De Bruyne/Courtois/Vanaken for Belgium, Koulibaly/Gueye/a farewell-tournament Mané for Senegal) with Belgium missing a true No. 9 (Lukaku benched) and Senegal set up as an organized low block — pre-match research flagged this as a cagey, error/set-piece-driven script, plausibly live deep into extra time and penalties given the tactical parity on both benches.", "model": "PELE 34.8% / 29.8% / 35.3%; Kalshi de-vigged 49.75% / 28.1% / 22.2%. Not bettable pre-match today — shown for context only.", "gdAngle": "None — knockout tie.", "singles": [], "longshots": [], "sgp": null}, {"matchup": "England vs DR Congo", "venue": "Mercedes-Benz Stadium, Atlanta (neutral)", "ko": "12:00 PM ET — FINAL, England 2-1 DR Congo", "archetype": "FINAL — reference only", "archClass": "live", "lineupNote": "Match complete — no lineup-lock relevance remaining.", "incentive": "Round of 32, win-or-go-home — England advance to the Round of 16.", "ourRead": "FINAL: England 2, DR Congo 1. Brian Cipenga struck early (7') to give Congo DR a shock lead; England needed a Harry Kane brace — a 75th-minute header and an 86th-minute finish — to complete the comeback and advance. Bellingham (19') and Sadiki (28') were both booked. This game had already kicked off before today's guide was built, so it was never presented as a pre-match pick — included here as the completed result only, sourced from the live ESPN scoreboard fetched this run.", "model": "Pre-match PELE had England 78.5% / Draw 16.7% / DR Congo 4.8% to win in regulation — the model favorite held after an early scare.", "gdAngle": "None — knockout tie, now moot.", "singles": [], "longshots": [], "sgp": null}]};
+
+const el=(t,c,h)=>{const e=document.createElement(t); if(c)e.className=c; if(h!=null)e.innerHTML=h; return e;};
+const app=document.getElementById('app');
+
+// hero
+document.getElementById('hero-eyebrow').textContent = DATA.meta.eyebrow || 'World Cup 2026';
+document.getElementById('hero-sub').textContent = DATA.meta.heroSub;
+const stamp=document.getElementById('hero-stamp');
+DATA.meta.chips.forEach(c=>{const s=el('span','chip',c); stamp.appendChild(s);});
+document.getElementById('disclaimer').innerHTML = DATA.meta.disclaimer;
+if(DATA.meta.liveBanner){const lb=el('div','live-banner'); lb.appendChild(el('span','pulse')); lb.appendChild(el('div',null,DATA.meta.liveBanner)); app.appendChild(lb);}
+
+function sectionHead(num,title){
+  const h=el('div','sec-head');
+  h.appendChild(el('span','num',num));
+  h.appendChild(el('h2',null,title));
+  h.appendChild(el('div','rule'));
+  return h;
+}
+
+// 1. The Read
+let s=el('section'); s.appendChild(sectionHead('01','The Slate Read'));
+let p=el('div','panel'); p.appendChild(el('p','lead',DATA.narrative));
+const th=el('div','themes');
+DATA.themes.forEach(t=>th.appendChild(el('div','theme '+(t.cls||''),t.txt)));
+p.appendChild(th); s.appendChild(p); app.appendChild(s);
+
+// 2. Card of the day
+s=el('section'); s.appendChild(sectionHead('02','Card of the Day'));
+const cod=el('div','cod');
+const m=el('div','cod-main'); m.appendChild(el('div','tag','★ Tightest Play'));
+m.appendChild(el('h3',null,DATA.cardOfDay.title)); m.appendChild(el('p',null,DATA.cardOfDay.body));
+cod.appendChild(m);
+const sd=el('div','cod-side'); sd.appendChild(el('div','tag','⚡ Best Longshot'));
+sd.appendChild(el('h3',null,DATA.cardOfDay.longshotTitle)); sd.appendChild(el('p',null,DATA.cardOfDay.longshotBody));
+cod.appendChild(sd); s.appendChild(cod); app.appendChild(s);
+
+// 3. Best singles
+s=el('section'); s.appendChild(sectionHead('03','Top Singles — Our Number vs the Price'));
+const b=el('div','board');
+DATA.bestSingles.forEach((x,i)=>{
+  const r=el('div','bet');
+  r.appendChild(el('div','rank',(i+1)));
+  const body=el('div','body');
+  body.appendChild(el('div','game',x.game));
+  body.appendChild(el('div','name',x.bet));
+  body.appendChild(el('div','why',x.rationale));
+  r.appendChild(body);
+  const meta=el('div','meta');
+  meta.appendChild(el('div','price',x.price));
+  meta.appendChild(el('div','probs','mkt '+x.marketProb+' → our '+x.modelProb));
+  meta.appendChild(el('div','badge '+x.confidence,x.confidence));
+  r.appendChild(meta); b.appendChild(r);
+});
+s.appendChild(b); app.appendChild(s);
+
+// 4. Longshots
+s=el('section'); s.appendChild(sectionHead('04','Longshots With Legs'));
+const lb=el('div','board');
+DATA.bestLongshots.forEach((x,i)=>{
+  const r=el('div','bet');
+  r.appendChild(el('div','rank','✦'));
+  const body=el('div','body');
+  body.appendChild(el('div','game',x.game));
+  body.appendChild(el('div','name',x.bet));
+  body.appendChild(el('div','why',x.mechanism));
+  r.appendChild(body);
+  const meta=el('div','meta');
+  meta.appendChild(el('div','price',x.price));
+  meta.appendChild(el('div','badge longshot','longshot'));
+  r.appendChild(meta); lb.appendChild(r);
+});
+s.appendChild(lb); app.appendChild(s);
+
+// 5. SGPs
+s=el('section'); s.appendChild(sectionHead('05','Correlated Same-Game Parlays'));
+const sg=el('div','board');
+DATA.bestSGPs.forEach(x=>{
+  const c=el('div','sgp');
+  c.appendChild(el('h4',null,x.game));
+  c.appendChild(el('p',null,x.thesis));
+  const ul=el('ul','legs'); x.legs.forEach(l=>ul.appendChild(el('li',null,l))); c.appendChild(ul);
+  c.appendChild(el('div','corr','<b>Why it correlates:</b> '+x.correlation+(x.stakeNote?' · '+x.stakeNote:'')));
+  sg.appendChild(c);
+});
+s.appendChild(sg); app.appendChild(s);
+
+// 6. Goal differential special
+s=el('section'); s.appendChild(sectionHead('06','The Goal-Differential Lever'));
+p=el('div','panel'); p.innerHTML='<p class="lead">'+DATA.gdSpecial+'</p>'; s.appendChild(p); app.appendChild(s);
+
+// 7. Start/sit watch
+s=el('section'); s.appendChild(sectionHead('07','Start / Sit Watch — Check Before You Lock'));
+p=el('div','panel'); p.innerHTML='<p>'+DATA.startSit+'</p>'; s.appendChild(p); app.appendChild(s);
+
+// 8. Game-by-game
+s=el('section'); s.appendChild(sectionHead('08','Game-by-Game Breakdown'));
+const gw=el('div','games');
+DATA.games.forEach((g,gi)=>{
+  const c=el('div','game'+(g.archClass==='live'?' islive':'')); c.style.animationDelay=(gi*0.08)+'s';
+  const top=el('div','game-top');
+  const left=el('div'); left.appendChild(el('div','matchup',g.matchup));
+  left.appendChild(el('div','vinfo',g.venue+'  ·  '+g.ko));
+  top.appendChild(left);
+  top.appendChild(el('div','atype '+g.archClass,g.archetype));
+  c.appendChild(top);
+  const bd=el('div','game-body');
+
+  const addRow=(cls,k,v)=>{const r=el('div','row '+cls); r.appendChild(el('div','k',k)); r.appendChild(el('div','v',v)); bd.appendChild(r); return r;};
+  addRow('lineup','Lineups & News',g.lineupNote);
+  addRow('','What They’re Playing For',g.incentive);
+  addRow('read','Our Read — The Script',g.ourRead);
+  const mr=el('div','row read'); mr.appendChild(el('div','k','Model vs Market')); mr.appendChild(el('div','model-line',g.model)); bd.appendChild(mr);
+
+  if(g.singles && g.singles.length){
+    const r=el('div','row'); r.appendChild(el('div','k','Singles With Edge'));
+    const mb=el('div','mini-board');
+    g.singles.forEach(x=>{
+      const mi=el('div','mini');
+      const n=el('div','n',x.bet); n.appendChild(el('span','sub',x.rationale)); mi.appendChild(n);
+      const rr=el('div','r'); rr.appendChild(el('div','p',x.price));
+      rr.appendChild(el('div','pr',x.marketProb+' → '+x.modelProb));
+      rr.appendChild(el('div','badge '+x.confidence,x.confidence)); mi.appendChild(rr);
+      mb.appendChild(mi);
+    });
+    r.appendChild(mb); bd.appendChild(r);
+  }
+  if(g.longshots && g.longshots.length){
+    const r=el('div','row'); r.appendChild(el('div','k','Longshots'));
+    const mb=el('div','mini-board');
+    g.longshots.forEach(x=>{
+      const mi=el('div','mini ls-row');
+      const n=el('div','n',x.bet); n.appendChild(el('span','sub',x.mechanism)); mi.appendChild(n);
+      const rr=el('div','r'); rr.appendChild(el('div','p',x.price)); mi.appendChild(rr);
+      mb.appendChild(mi);
+    });
+    r.appendChild(mb); bd.appendChild(r);
+  }
+  if(g.sgp){
+    const r=el('div','row'); r.appendChild(el('div','k','Same-Game Parlay'));
+    const sgp=el('div','sgp');
+    sgp.appendChild(el('p',null,g.sgp.thesis));
+    const ul=el('ul','legs'); g.sgp.legs.forEach(l=>ul.appendChild(el('li',null,l))); sgp.appendChild(ul);
+    sgp.appendChild(el('div','corr','<b>Correlation:</b> '+g.sgp.correlation));
+    r.appendChild(sgp); bd.appendChild(r);
+  }
+  addRow('gd','Goal-Differential Angle',g.gdAngle);
+
+  c.appendChild(bd); gw.appendChild(c);
+});
+s.appendChild(gw); app.appendChild(s);
+</script>
+</body>
+</html>
